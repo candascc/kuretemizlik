@@ -9,31 +9,56 @@ Bu doküman, cPanel'de GitHub repository'sini kurmak için adım adım talimatla
 1. cPanel hesabınıza giriş yapın
 2. **"Files"** > **"Git™ Version Control"** tıklayın
 
-### 2️⃣ Repository Clone Et
+### 2️⃣ SSH Key Kurulumu (ÖNEMLİ!)
+
+Eğer repository private ise veya "could not read Username" hatası alıyorsanız:
+
+**Detaylı rehber:** [CPANEL_SSH_KEY_SETUP.md](CPANEL_SSH_KEY_SETUP.md)
+
+**Hızlı özet:**
+1. cPanel > Security > SSH Access > Manage SSH Keys
+2. Generate New Key (parolasız)
+3. Key'i yetkilendir (Authorize)
+4. Public key'i kopyala
+5. GitHub > Settings > SSH and GPG keys > New SSH key
+6. Key'i ekle
+
+### 3️⃣ Repository Clone Et
 
 1. **"Create"** butonuna tıklayın
 2. **"Clone a Repository"** toggle'ını **AÇIK** yapın
 3. **Clone URL** alanına:
+   
+   **SSH URL kullanın (önerilen):**
+   ```
+   git@github.com:candascc/kuretemizlik.git
+   ```
+   
+   **VEYA Public repository ise HTTPS:**
    ```
    https://github.com/candascc/kuretemizlik.git
    ```
+   
+   ⚠️ **ÖNEMLİ:** Private repository için mutlaka SSH URL kullanın!
+
 4. **Repository Path** alanına (kullanıcı adınızı değiştirin):
    ```
-   /home/KULLANICI_ADI/public_html/app
+   /home/KULLANICI_ADI/repositories/kuretemizlik
    ```
-   > **Not:** `KULLANICI_ADI` yerine cPanel kullanıcı adınızı yazın. Path'i hosting sağlayıcınıza göre ayarlayın.
+   > **Not:** `KULLANICI_ADI` yerine cPanel kullanıcı adınızı yazın. Önerilen: ayrı repository dizini kullanın.
 
 5. **Repository Name:** `kuretemizlik-app`
 6. **"Create"** tıklayın
+7. SSH host key verification ekranında **"Save and Continue"** tıklayın
 
-### 3️⃣ İlk Deployment
+### 4️⃣ İlk Deployment
 
 1. Repository listesinde **"Manage"** tıklayın
 2. **"Pull or Deploy"** sekmesine gidin
 3. **"Update from Remote"** tıklayın (GitHub'dan çeker)
 4. **"Deploy HEAD Commit"** tıklayın (canlıya deploy eder)
 
-### 4️⃣ Test Et
+### 5️⃣ Test Et
 
 1. Canlı siteyi açın: `https://www.kuretemizlik.com/app`
 2. Site çalışıyorsa ✅ başarılı!
@@ -72,13 +97,18 @@ Eğer deployment path'i farklıysa, `.cpanel.yml` dosyasını düzenleyin:
 
 ## 🔐 SSH Key (Private Repo için)
 
-Eğer repository private ise:
+Eğer repository private ise veya "could not read Username" hatası alıyorsanız:
 
-1. cPanel > **Security** > **SSH Access** > **Manage SSH Keys**
-2. **Generate New Key** veya mevcut key'i kullan
-3. **Public Key**'i kopyala
-4. GitHub > **Settings** > **SSH and GPG keys** > **New SSH key**
-5. Key'i yapıştır ve kaydet
+**Detaylı rehber:** [CPANEL_SSH_KEY_SETUP.md](CPANEL_SSH_KEY_SETUP.md)
+
+**Hızlı adımlar:**
+1. cPanel > Security > SSH Access > Manage SSH Keys
+2. Generate New Key (parolasız)
+3. Key'i yetkilendir (Authorize)
+4. Public key'i kopyala
+5. GitHub > Settings > SSH and GPG keys > New SSH key
+6. Key'i ekle
+7. Repository oluştururken **SSH URL** kullan: `git@github.com:candascc/kuretemizlik.git`
 
 ---
 
@@ -87,8 +117,11 @@ Eğer repository private ise:
 **S: Path'i nasıl bulurum?**
 A: cPanel > File Manager'da dosyalarınızın bulunduğu dizini kontrol edin. Genellikle `/home/kullanici/public_html` veya `/home/kullanici/public_html/app` şeklindedir.
 
+**S: "could not read Username" hatası alıyorum**
+A: Repository private ise SSH key kurmanız gerekir. [CPANEL_SSH_KEY_SETUP.md](CPANEL_SSH_KEY_SETUP.md) rehberini takip edin. Veya repository'yi public yapın.
+
 **S: "Host key verification failed" hatası alıyorum**
-A: Repository oluştururken SSH key verification ekranında "Save and Continue" tıklayın.
+A: Repository oluştururken SSH key verification ekranında "Save and Continue" tıklayın. GitHub'ın resmi SSH key'lerini kontrol edin.
 
 **S: Deployment çalışmıyor**
 A: 
