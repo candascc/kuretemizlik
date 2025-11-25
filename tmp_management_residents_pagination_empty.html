@@ -1,0 +1,2972 @@
+<!DOCTYPE html>
+<html lang="tr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="csrf-token" content="6a0f2c3f953e1549727e6ef9c146a1456659de06f56dd3943cdb5fbae1313fb9">
+    <!-- Security headers should be set on the server (Apache/Nginx). Meta CSP is disabled here to avoid blocking CDN scripts/styles in dev. -->
+    <!-- <meta http-equiv="Content-Security-Policy" content=""> -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <meta name="description" content="Küre Temizlik - Profesyonel temizlik hizmetleri ve iş takip sistemi">
+    <meta name="keywords" content="temizlik, hizmet, iş takip, müşteri yönetimi, sözleşme">
+    <meta name="author" content="Küre Temizlik">
+    <meta name="theme-color" content="#2563eb">
+    <!-- Mobile optimization -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=yes">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="
+Warning: Undefined array key "HTTP_HOST" in C:\X\Yazılım\Alastyr_ftp\kuretemizlik.com\app\src\Views\layout\base.php on line 49
+http:///management/residents">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sakin Yönetimi">
+    <meta property="og:description" content="Profesyonel temizlik hizmetleri ve iş takip sistemi">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="
+Warning: Undefined array key "HTTP_HOST" in C:\X\Yazılım\Alastyr_ftp\kuretemizlik.com\app\src\Views\layout\base.php on line 55
+http:///management/residents">
+    
+    <title>Sakin Yönetimi</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/app/assets/img/logokureapp.png">
+    <link rel="apple-touch-icon" href="/app/assets/img/logokureapp.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/app/manifest.json">
+    
+    <!-- Tailwind CSS (config must be defined BEFORE CDN script) -->
+    <script>
+        // Suppress console warnings BEFORE loading Tailwind
+        const originalWarn = console.warn;
+        const originalError = console.error;
+        console.warn = function(...args) {
+            const message = args.join(' ');
+            if (message.includes('cdn.tailwindcss.com should not be used in production') || 
+                message.includes('tailwindcss.com')) {
+                return;
+            }
+            originalWarn.apply(console, args);
+        };
+        console.error = function(...args) {
+            const message = args.join(' ');
+            if (message.includes('cdn.tailwindcss.com')) {
+                return;
+            }
+            originalError.apply(console, args);
+        };
+
+        // Define Tailwind config BEFORE loading the CDN script (support both globals)
+        try { if (typeof tailwind === 'undefined') { window.tailwind = {}; } } catch(e) { window.tailwind = {}; }
+        var TW_CONFIG = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        secondary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        accent: {
+                            50: '#fdf4ff',
+                            100: '#fae8ff',
+                            200: '#f5d0fe',
+                            300: '#f0abfc',
+                            400: '#e879f9',
+                            500: '#d946ef',
+                            600: '#c026d3',
+                            700: '#a21caf',
+                            800: '#86198f',
+                            900: '#701a75',
+                        },
+                        neutral: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    fontWeight: {
+                        'normal': '400',
+                        'medium': '500',
+                        'semibold': '600',
+                        'bold': '700',
+                        'extrabold': '800',
+                    },
+                    fontSize: {
+                        'xs': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.05em' }],
+                        'sm': ['0.875rem', { lineHeight: '1.25rem', letterSpacing: '0.02em' }],
+                        'base': ['1rem', { lineHeight: '1.5rem', letterSpacing: '0' }],
+                        'lg': ['1.125rem', { lineHeight: '1.75rem', letterSpacing: '-0.01em' }],
+                        'xl': ['1.25rem', { lineHeight: '1.75rem', letterSpacing: '-0.02em' }],
+                        '2xl': ['1.5rem', { lineHeight: '2rem', letterSpacing: '-0.03em' }],
+                        '3xl': ['1.875rem', { lineHeight: '2.25rem', letterSpacing: '-0.04em' }],
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '88': '22rem',
+                        '128': '32rem',
+                    },
+                    borderRadius: {
+                        'xl': '0.75rem',
+                        '2xl': '1rem',
+                        '3xl': '1.5rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+                        'medium': '0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                        'strong': '0 10px 40px -10px rgba(0, 0, 0, 0.15), 0 2px 10px -2px rgba(0, 0, 0, 0.05)',
+                        'glow-sm': '0 0 10px rgba(37, 99, 235, 0.15)',
+                        'glow-md': '0 0 20px rgba(37, 99, 235, 0.2)',
+                        'glow-lg': '0 0 30px rgba(37, 99, 235, 0.25)',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                        'gradient-mesh': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                    }
+                }
+            }
+        };
+        // Expose for CDN parser
+        try { tailwind.config = TW_CONFIG; } catch(e) { /* ignore */ }
+        try { window.tailwind.config = TW_CONFIG; } catch(e) { /* ignore */ }
+        // Sticky shadow for nav
+        document.addEventListener('DOMContentLoaded', function(){
+            const navEl = document.querySelector('nav[data-header]');
+            if (!navEl) { return; }
+
+            const updateNavState = () => {
+                if (window.scrollY > 24) {
+                    navEl.classList.add('is-compact');
+                    navEl.style.boxShadow = '0 3px 12px rgba(15, 23, 42, 0.15)';
+                } else {
+                    navEl.classList.remove('is-compact');
+                    navEl.style.boxShadow = 'none';
+                }
+            };
+
+            updateNavState();
+            window.addEventListener('scroll', updateNavState, { passive: true });
+
+            const triggerSearch = () => {
+                if (window.globalSearch && typeof window.globalSearch.open === 'function') {
+                    window.globalSearch.open();
+                }
+            };
+
+            const searchInput = document.getElementById('header-search-trigger');
+            if (searchInput) {
+                const openSearch = (event) => {
+                    event.preventDefault();
+                    triggerSearch();
+                };
+                ['click', 'focus'].forEach(evt => searchInput.addEventListener(evt, openSearch));
+                searchInput.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        openSearch(event);
+                    }
+                    if (event.key === 'Escape') {
+                        searchInput.blur();
+                    }
+                });
+            }
+        });
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+            <link rel="preload" href="/app/assets/dist/app.bundle.css?v=1762692121" as="style">
+        <link rel="preload" href="/app/assets/dist/app.bundle.js?v=1762692121" as="script">
+        <link rel="preload" href="/app/assets/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/app/assets/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Tailwind CSS CDN (MUST LOAD BEFORE custom.css for @layer support) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+            <link rel="stylesheet" href="/app/assets/dist/app.bundle.css?v=1762692121">
+        
+    <!-- Print CSS -->
+        
+    <!-- Chart.js -->
+    <script src="/app/assets/vendor/chart.umd.min.js"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js"></script>
+    
+    <!-- Form Validation CSS -->
+    <style>
+/* Form Validation Styles */
+.field-error {
+    @apply text-sm text-red-600 mt-1 flex items-center;
+}
+
+.field-error::before {
+    content: "⚠ ";
+    @apply mr-1;
+}
+
+.form-hint {
+    @apply text-sm text-gray-500 mt-1;
+}
+
+/* Error states */
+.form-input.border-red-500 {
+    @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+}
+
+.form-input.border-green-500 {
+    @apply border-green-500 focus:ring-green-500 focus:border-green-500;
+}
+
+/* Success checkmark */
+.form-group:has(input:not(:invalid):not(:placeholder-shown)) .field-success {
+    display: block;
+}
+
+.field-success {
+    @apply hidden text-green-600 text-sm mt-1 flex items-center;
+}
+
+.field-success::before {
+    content: "✓ ";
+    @apply mr-1 font-bold;
+}
+
+/* Required field indicator */
+.form-label .required-indicator {
+    @apply text-red-500 ml-1;
+}
+
+/* Character counter */
+.char-counter {
+    @apply text-xs text-gray-500 mt-1 text-right;
+}
+
+.char-counter.warning {
+    @apply text-yellow-600;
+}
+
+.char-counter.error {
+    @apply text-red-600;
+}
+
+/* Loading state for inputs */
+.form-input.loading {
+    @apply relative;
+}
+
+.form-input.loading::after {
+    content: "";
+    @apply absolute right-3 top-1/2 -translate-y-1/2;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e5e7eb;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Validation icon positions */
+.form-group {
+    @apply relative;
+}
+
+.validation-icon {
+    @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none;
+}
+
+/* Error icon */
+.validation-icon.error {
+    @apply text-red-500;
+}
+
+/* Success icon */
+.validation-icon.success {
+    @apply text-green-500;
+}
+</style>
+
+    
+    <!-- Custom JavaScript -->
+            <script src="/app/assets/dist/app.bundle.js?v=1762692121" defer></script>
+        
+    <!-- Inline CSS (Legacy - Continued) -->
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+        [x-cloak] { display: none !important; }
+        
+        nav[data-header] .header-top { transition: padding 0.3s ease; }
+        nav[data-header] .logo-title { transition: transform 0.3s ease, font-size 0.3s ease; }
+        nav[data-header].is-compact .header-top { padding-top: 0.45rem !important; padding-bottom: 0.45rem !important; }
+        nav[data-header].is-compact .logo-title { font-size: 0.95rem; }
+        nav[data-header].is-compact .quick-action-btn { padding-top: 0.45rem; padding-bottom: 0.45rem; }
+
+        .quick-action-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
+            padding: 0.6rem 1.1rem;
+            min-height: 44px;
+            min-width: 44px;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.17);
+            border: 1px solid rgba(255, 255, 255, 0.26);
+            color: rgba(255, 255, 255, 0.98);
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            transition: all 0.2s ease;
+        }
+
+        .quick-action-btn:hover,
+        .quick-action-btn:focus {
+            background: rgba(255, 255, 255, 0.28);
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.25);
+        }
+
+        .quick-action-btn:focus-visible {
+            outline: 3px solid rgba(255, 255, 255, 0.65);
+            outline-offset: 3px;
+        }
+
+        .status-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(15, 23, 42, 0.35);
+            backdrop-filter: blur(8px);
+            color: rgba(255, 255, 255, 0.96);
+            font-weight: 600;
+        }
+
+        .footer-status-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.2rem 0.65rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            background: rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(6px);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+
+        .header-search-input {
+            box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.12);
+        }
+
+        .header-search-input:hover {
+            background: rgba(255, 255, 255, 0.22);
+        }
+
+        .module-subnav {
+            scrollbar-width: none;
+        }
+
+        .module-subnav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .module-subnav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.4rem 0.75rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.82);
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+
+        .module-subnav-link:hover {
+            background: rgba(255, 255, 255, 0.24);
+            color: #ffffff;
+        }
+
+        .module-subnav-link.is-active {
+            background: #ffffff;
+            color: #1d4ed8;
+            box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+        }
+
+        .module-subnav-link.is-active i {
+            color: #1d4ed8;
+        }
+
+        .notif-item {
+            margin-bottom: 0.5rem;
+            border-radius: 0.75rem;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .notif-item:hover {
+            background: rgba(37, 99, 235, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .notif-pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.15rem 0.55rem;
+            border-radius: 9999px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: rgba(255, 255, 255, 0.85);
+            color: #1d4ed8;
+        }
+
+        .dark .notif-pill {
+            background: rgba(37, 99, 235, 0.2);
+            color: #bfdbfe;
+        }
+
+        /* Ensure Font Awesome loads properly */
+        .fas, .far, .fal, .fad, .fab {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 6 Brands", "FontAwesome" !important;
+            font-weight: 900;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .far {
+            font-weight: 400;
+        }
+        .fal {
+            font-weight: 300;
+        }
+        .fab {
+            font-family: "Font Awesome 6 Brands", "FontAwesome" !important;
+        }
+        .fade-in { animation: fadeIn 0.3s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        /* Flash message animations */
+        @keyframes slideInDown { 
+            from { 
+                opacity: 0; 
+                transform: translateY(-20px); 
+            } 
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            } 
+        }
+        
+        /* Loading states */
+        .loading { opacity: 0.6; pointer-events: none; }
+        .loading::after { 
+            content: ''; 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            width: 20px; 
+            height: 20px; 
+            margin: -10px 0 0 -10px; 
+            border: 2px solid #f3f3f3; 
+            border-top: 2px solid #3498db; 
+            border-radius: 50%; 
+            animation: spin 1s linear infinite; 
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        /* Form validation */
+        .form-error { 
+            border-color: #ef4444 !important; 
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+        }
+        .form-success { 
+            border-color: #10b981 !important; 
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
+        }
+        
+        /* Form field error states */
+        .form-error input,
+        .form-error select,
+        .form-error textarea {
+            border-color: #ef4444 !important;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+        }
+        
+        /* Form error label */
+        .form-error label {
+            color: #ef4444 !important;
+        }
+        
+        /* Skeleton loading */
+        .skeleton { 
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); 
+            background-size: 200% 100%; 
+            animation: loading 1.5s infinite; 
+        }
+        @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+        
+        /* Dropdown animations */
+        .dropdown-enter {
+            animation: dropdownFadeIn 0.15s ease-out;
+        }
+        
+        @keyframes dropdownFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .mobile-stack { flex-direction: column !important; }
+            .mobile-full { width: 100% !important; }
+            .mobile-text-sm { font-size: 0.875rem !important; }
+            .mobile-p-2 { padding: 0.5rem !important; }
+            
+            /* Prevent horizontal overflow */
+            .overflow-x-auto {
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            /* Better table responsiveness */
+            table {
+                min-width: 100%;
+            }
+            
+            /* Calendar mobile improvements */
+            .calendar-grid {
+                font-size: 0.75rem;
+            }
+            
+            /* Better touch targets */
+            button, a {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+        
+        
+        /* Touch targets */
+        .touch-target { min-height: 44px; min-width: 44px; }
+        
+        /* Enhanced focus states */
+        .focus-ring:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+            border-color: #3b82f6;
+        }
+        
+        .focus-ring-dark:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+            border-color: #3b82f6;
+        }
+        
+        /* Enhanced hover effects */
+        .hover-lift:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Performance optimizations */
+        .will-change-transform { will-change: transform; }
+        .will-change-opacity { will-change: opacity; }
+        
+        /* Lazy loading placeholder */
+        .lazy-placeholder { 
+            background: #f3f4f6; 
+            min-height: 200px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        
+        /* Typography hierarchy */
+        .text-display {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+        }
+        
+        .text-heading-1 {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.3;
+            letter-spacing: -0.025em;
+        }
+        
+        .text-heading-2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.4;
+            letter-spacing: -0.025em;
+        }
+        
+        .text-heading-3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        .text-body-large {
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        
+        .text-body {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        
+        .text-body-small {
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        .text-caption {
+            font-size: 0.75rem;
+            font-weight: 500;
+            line-height: 1.4;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Custom icon utilities */
+        .icon-sm { font-size: 0.875rem; }
+        .icon-md { font-size: 1rem; }
+        .icon-lg { font-size: 1.25rem; }
+        .icon-xl { font-size: 1.5rem; }
+        .icon-2xl { font-size: 2rem; }
+        
+        .icon-primary { color: #3b82f6; }
+        .icon-secondary { color: #22c55e; }
+        .icon-accent { color: #d946ef; }
+        .icon-success { color: #10b981; }
+        .icon-warning { color: #f59e0b; }
+        .icon-error { color: #ef4444; }
+        .icon-gray { color: #6b7280; }
+        
+        /* Icon animations */
+        .icon-spin { animation: spin 1s linear infinite; }
+        .icon-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        .icon-bounce { animation: bounce 1s infinite; }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(-25%);
+                animation-timing-function: cubic-bezier(0.8,0,1,1);
+            }
+            50% {
+                transform: none;
+                animation-timing-function: cubic-bezier(0,0,0.2,1);
+            }
+        }
+        
+        /* Text readability improvements */
+        .text-readable {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .text-contrast-high {
+            color: #1f2937;
+        }
+        
+        .text-contrast-medium {
+            color: #4b5563;
+        }
+        
+        .text-contrast-low {
+            color: #6b7280;
+        }
+        
+        
+        /* Link readability */
+        .link-readable {
+            color: #2563eb;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 1px;
+        }
+        
+        .link-readable:hover {
+            color: #1d4ed8;
+            text-decoration-thickness: 2px;
+        }
+        
+        /* Force grid layout for dashboard stats */
+        .grid.grid-cols-3 {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
+        
+        .grid.grid-cols-3 > div {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+    </style>
+    <style type="text/tailwindcss">
+        @layer components {
+            .responsive-table {
+                @apply overflow-x-auto;
+            }
+
+            .responsive-table table {
+                @apply min-w-full divide-y divide-gray-200 dark:divide-gray-700;
+            }
+
+            .responsive-table th {
+                @apply px-3 sm:px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider;
+            }
+
+            .responsive-table td {
+                @apply px-3 sm:px-6 py-4 whitespace-nowrap text-sm;
+            }
+
+            .responsive-table .action-buttons {
+                @apply flex space-x-2 sm:space-x-3;
+            }
+
+            .responsive-table .action-button {
+                @apply p-1 rounded transition-colors duration-150;
+            }
+
+            .responsive-form {
+                @apply p-4 sm:p-6 rounded-xl shadow-soft border border-gray-200 dark:border-gray-700;
+            }
+
+            .responsive-form .form-grid {
+                @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+            }
+
+            .responsive-form .form-input {
+                @apply w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white transition-all duration-200 text-sm;
+            }
+
+            .responsive-form .form-label {
+                @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2;
+            }
+
+            .responsive-form .form-button {
+                @apply w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-soft hover:shadow-medium transition-all duration-200 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 text-sm;
+            }
+
+            .responsive-card {
+                @apply bg-white dark:bg-gray-800 rounded-xl shadow-soft border border-gray-200 dark:border-gray-700 p-4 sm:p-6;
+            }
+
+            .responsive-card-header {
+                @apply flex items-center mb-4 sm:mb-6;
+            }
+
+            .responsive-card-icon {
+                @apply flex-shrink-0 p-2 bg-primary-100 dark:bg-primary-900/20 rounded-lg mr-3;
+            }
+
+            .responsive-card-title {
+                @apply text-lg sm:text-xl font-bold text-gray-900 dark:text-white;
+            }
+
+            .responsive-grid {
+                @apply grid grid-cols-1 gap-4 sm:gap-6;
+            }
+
+            .responsive-grid-2 {
+                @apply grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6;
+            }
+
+            .responsive-grid-3 {
+                @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
+            }
+
+            .responsive-grid-4 {
+                @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6;
+            }
+
+            .responsive-text-xs {
+                @apply text-xs sm:text-sm;
+            }
+
+            .responsive-text-sm {
+                @apply text-sm sm:text-base;
+            }
+
+            .responsive-text-base {
+                @apply text-base sm:text-lg;
+            }
+
+            .responsive-text-lg {
+                @apply text-lg sm:text-xl;
+            }
+
+            .responsive-text-xl {
+                @apply text-xl sm:text-2xl;
+            }
+
+            .responsive-p {
+                @apply p-4 sm:p-6;
+            }
+
+            .responsive-px {
+                @apply px-3 sm:px-6;
+            }
+
+            .responsive-py {
+                @apply py-4 sm:py-6;
+            }
+
+            .responsive-mb {
+                @apply mb-4 sm:mb-6;
+            }
+
+            .responsive-mt {
+                @apply mt-4 sm:mt-6;
+            }
+
+            .responsive-button {
+                @apply inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 text-sm font-semibold rounded-lg shadow-soft hover:shadow-medium transition-all duration-200 focus:ring-2 focus:ring-offset-2;
+            }
+
+            .responsive-button-primary {
+                @apply responsive-button bg-primary-600 hover:bg-primary-700 text-white focus:ring-primary-500;
+            }
+
+            .responsive-button-secondary {
+                @apply responsive-button bg-gray-700 hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-500 text-white focus:ring-gray-500;
+            }
+
+            .responsive-icon {
+                @apply text-sm sm:text-base;
+            }
+
+            .responsive-icon-sm {
+                @apply text-xs sm:text-sm;
+            }
+
+            .responsive-icon-lg {
+                @apply text-base sm:text-lg;
+            }
+        }
+    </style>
+    
+    <!-- Dropdown Toggle Script -->
+    <script>
+        // Global dropdown handler
+        window.toggleDropdown = function(name, event) {
+            if (event) {
+                event.stopPropagation();
+                event.preventDefault();
+            }
+            const dropdown = document.getElementById('dropdown-' + name);
+            if (!dropdown) { return false; }
+            const isVisible = dropdown.style.display !== 'none' && dropdown.style.display !== '';
+            // Close all first
+            document.querySelectorAll('[id^="dropdown-"]').forEach(function(el){ el.style.display='none'; });
+            if (!isVisible) {
+                let button = null;
+                if (event && event.target) {
+                    button = event.target.closest('button');
+                }
+                if (!button) {
+                    // Fallback to known buttons
+                    const idMap = {
+                        settings: 'nav-settings',
+                        operations: 'nav-operations',
+                        reports: 'nav-reports',
+                        'management-services': 'nav-management-services',
+                        system: 'system-menu-button'
+                    };
+                    const btnId = idMap[name];
+                    if (btnId) { button = document.getElementById(btnId); }
+                }
+                if (button) {
+                    const rect = button.getBoundingClientRect();
+                    dropdown.style.position = 'fixed';
+                    dropdown.style.top = (rect.bottom + window.scrollY) + 'px';
+                    dropdown.style.left = (rect.left + window.scrollX) + 'px';
+                    dropdown.style.zIndex = '9999';
+                }
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
+            return false;
+        };
+        
+        // Mobile menu toggle
+        window.toggleMobileMenu = function() {
+            console.log('toggleMobileMenu called');
+            const menu = document.getElementById('mobile-menu');
+            if (menu) {
+                const isVisible = menu.style.display !== 'none';
+                menu.style.display = isVisible ? 'none' : 'block';
+                console.log('Mobile menu toggled:', !isVisible);
+            }
+        };
+        
+        // Dark mode helpers
+            function setThemeMode(mode){
+                const html = document.documentElement; const body=document.body;
+                html.classList.remove('dark'); body.classList.remove('dark');
+                if(mode==='dark'){ html.classList.add('dark'); body.classList.add('dark'); }
+                localStorage.setItem('themeMode', mode);
+                const icon = document.getElementById('dark-mode-icon');
+                if(icon){ icon.className = 'fas text-sm ' + (mode==='dark' ? 'fa-sun' : 'fa-moon'); }
+            }
+            window.toggleDarkMode = function(){
+                const cur = localStorage.getItem('themeMode') || 'light';
+                const next = cur==='light' ? 'dark' : 'light';
+                setThemeMode(next);
+            };
+        
+        // Initialize on DOM ready
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM ready - initializing...');
+            
+            // Load dark mode from localStorage or system preference
+            const stored = localStorage.getItem('themeMode');
+            if(stored){ setThemeMode(stored); }
+            else {
+                const prefers = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                setThemeMode(prefers ? 'dark' : 'light');
+            }
+            
+            // Close dropdowns when clicking outside (with delay to avoid immediate closing)
+            document.addEventListener('click', function(event) {
+                const clickedDropdown = event.target.closest('[id^="dropdown-"]');
+                const clickedButton = event.target.closest('[data-dropdown]');
+                
+                if (!clickedDropdown && !clickedButton) {
+                    setTimeout(function() {
+                        document.querySelectorAll('[id^="dropdown-"]').forEach(function(el) {
+                            el.style.display = 'none';
+                        });
+                    }, 10);
+                }
+            });
+            
+            // Add dropdown-menu class to all dropdown menus
+            document.querySelectorAll('[id^="dropdown-"]').forEach(function(el) {
+                el.classList.add('dropdown-menu');
+            });
+            
+            console.log('Initialization complete');
+        });
+    </script>
+</head>
+<body class="h-full bg-gray-50 dark:bg-gray-900 flex flex-col transition-colors duration-300">
+        <nav data-header class="sticky top-0 z-50 header-shell bg-gradient-to-r from-primary-600 to-primary-700 transition-all duration-300 mode-operations">
+    <div class="header-top border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 py-4">
+                        <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between text-white/80 text-[11px] sm:text-xs mb-3">
+                <div class="flex flex-wrap items-center gap-2">
+                                            <span class="status-chip bg-white/12 border border-white/20 text-white px-2 py-1 rounded-lg">SLA 99.9%</span>
+                                            <span class="status-chip bg-white/12 border border-white/20 text-white px-2 py-1 rounded-lg">Yedek: 09.11.2025 22:19</span>
+                                            <span class="status-chip bg-white/12 border border-white/20 text-white px-2 py-1 rounded-lg">v1</span>
+                                    </div>
+                                <div class="flex flex-wrap items-center gap-2 md:justify-end">
+                                                                                            <span class="status-chip inline-flex items-center gap-1 mode-badge hidden sm:inline-flex" id="sb-mode">
+                            <i class="fas fa-layer-group text-white/90 text-xs" aria-hidden="true"></i>                            <span>Temizlik Operasyonları</span>
+                        </span>
+                                                                                            <span class="status-chip inline-flex items-center gap-1" id="sb-cache">
+                            <i class="fas fa-bolt text-white/90 text-xs" aria-hidden="true"></i>                            <span>Cache: —</span>
+                        </span>
+                                                                                            <span class="status-chip inline-flex items-center gap-1" id="sb-db">
+                            <i class="fas fa-database text-white/90 text-xs" aria-hidden="true"></i>                            <span>DB: —</span>
+                        </span>
+                                                                                            <span class="status-chip inline-flex items-center gap-1" id="sb-disk">
+                            <i class="fas fa-hdd text-white/90 text-xs" aria-hidden="true"></i>                            <span>Disk: —</span>
+                        </span>
+                                                                                            <span class="status-chip inline-flex items-center gap-1" id="sb-queue">
+                            <i class="fas fa-tasks text-white/90 text-xs" aria-hidden="true"></i>                            <span>Queue: —</span>
+                        </span>
+                                    </div>
+                            </div>
+                        <div class="flex flex-col sm:hidden text-white/80 text-[11px] mb-2">
+                <div class="flex items-center justify-end gap-2">
+                                        <div class="relative" id="notif-root-mobile">
+                        <button id="notif-button-mobile" class="relative inline-flex items-center justify-center p-2 text-white hover:bg-white/15 rounded-lg transition-colors duration-200" title="Bildirimler" aria-label="Bildirimler">
+                            <i class="fas fa-bell text-lg" aria-hidden="true"></i>
+                                                    </button>
+                    </div>
+                                                            <div class="inline-flex items-center bg-white/15 px-3 py-1 rounded-md">
+                        <i class="fas fa-user text-white text-xs mr-1" aria-hidden="true"></i>
+                        <span class="text-white text-xs">test_admin_6910e94151bde</span>
+                    </div>
+                    <a href="/app/logout"
+                       class="inline-flex items-center justify-center p-2 bg-white/15 text-white rounded-md hover:bg-white/25 transition-all duration-200"
+                       aria-label="Çıkış">
+                        <i class="fas fa-sign-out-alt text-xs"></i>
+                    </a>
+                                    </div>
+            </div>
+
+            <div class="grid gap-4 lg:grid-cols-[auto,1fr,auto] items-start lg:items-center">
+                <div class="flex items-center gap-3 min-w-0 w-full sm:w-auto">
+                    <a href="/app/" class="flex items-center gap-3 group shrink-0" aria-label="Küre Temizlik">
+                        <span class="relative inline-flex items-center justify-center rounded-full p-[0.5px] sm:p-[0.75px] bg-gradient-to-br from-[#5c83ff] via-[#68cfff] to-[#60f5c3] shadow-soft transition-all duration-200 group-hover:from-[#6a8aff] group-hover:to-[#74f7d2]">
+                            <span class="relative h-[5.625rem] w-[5.625rem] sm:h-[6.5625rem] sm:w-[6.5625rem] rounded-full overflow-hidden bg-transparent">
+                                                                    <img src="/app/assets/img/logokureapp.png?v=1762587230"
+                                         alt="Küre Temizlik Logosu"
+                                         class="h-full w-full object-cover scale-[1.36]"
+                                         loading="lazy" decoding="async">
+                                                            </span>
+                        </span>
+                    </a>
+                                        <div class="flex-1 flex justify-end sm:hidden">
+                        <div class="inline-flex items-center gap-1 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm p-1 text-[11px] mode-switcher">
+                                                                                            <a href="/management/residents?search=NoMatch6910e941ed8ac&amp;per_page=5&amp;header_mode=operations"
+                                   class="mode-switcher__option is-active"
+                                   title="Temizlik planlama, saha yönetimi ve operasyonel modüller"                                   role="tab"
+                                   aria-selected="true">
+                                    <span>Operasyon</span>
+                                </a>
+                                                                                            <a href="/management/residents?search=NoMatch6910e941ed8ac&amp;per_page=5&amp;header_mode=management"
+                                   class="mode-switcher__option "
+                                   title="Apartman, site ve sakin yönetimi modülleri"                                   role="tab"
+                                   aria-selected="false">
+                                    <span>Yönetim</span>
+                                </a>
+                                                    </div>
+                    </div>
+                                    </div>
+
+                                <div class="flex flex-col gap-3 w-full">
+                                        <div class="relative group header-search">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-white/60"></i>
+                        <input id="header-search-trigger"
+                               type="search"
+                               readonly
+                               placeholder="Hızlı arama (Ctrl + /)"
+                               class="w-full header-search-input pl-11 pr-20 py-2.5 rounded-xl bg-white/15 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 cursor-pointer transition-all duration-200"
+                               aria-label="Hızlı arama">
+                        <span class="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] uppercase tracking-wider text-white/70 px-2 py-1 bg-white/10 rounded-md border border-white/20">Ctrl + /</span>
+                    </div>
+                    
+                                        <div class="header-actions mt-2">
+                        <div class="header-actions__primary quick-actions-row flex flex-wrap items-center gap-2 text-xs sm:text-sm">
+                                                                                            <a href="/app/jobs/new" class="quick-action-btn variant-operations">
+                                    <i class="fas fa-plus-circle text-xs sm:text-sm"></i>                                    <span>Yeni İş</span>
+                                </a>
+                                                                                            <a href="/app/recurring/new" class="quick-action-btn variant-operations">
+                                    <i class="fas fa-redo text-xs sm:text-sm"></i>                                    <span>Periyodik İş</span>
+                                </a>
+                                                                                            <a href="/app/finance/new" class="quick-action-btn variant-operations">
+                                    <i class="fas fa-credit-card text-xs sm:text-sm"></i>                                    <span>Yeni Tahsilat</span>
+                                </a>
+                                                    </div>
+                                                    <div class="header-actions__secondary mode-switcher hidden sm:inline-flex items-center gap-1 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm p-1 text-xs sm:text-sm">
+                                                                                                        <a href="/management/residents?search=NoMatch6910e941ed8ac&amp;per_page=5&amp;header_mode=operations"
+                                       class="mode-switcher__option is-active"
+                                       title="Temizlik planlama, saha yönetimi ve operasyonel modüller"                                       role="tab"
+                                       aria-selected="true">
+                                        <i class="fas fa-cogs"></i>                                        <span>Operasyon</span>
+                                    </a>
+                                                                                                        <a href="/management/residents?search=NoMatch6910e941ed8ac&amp;per_page=5&amp;header_mode=management"
+                                       class="mode-switcher__option "
+                                       title="Apartman, site ve sakin yönetimi modülleri"                                       role="tab"
+                                       aria-selected="false">
+                                        <i class="fas fa-city"></i>                                        <span>Yönetim</span>
+                                    </a>
+                                                            </div>
+                                            </div>
+                                    </div>
+                
+                <div class="flex flex-wrap items-center justify-end gap-3 text-white">
+                    <div class="flex items-center gap-3 w-full lg:w-auto justify-end order-1 lg:order-none">
+                                                <div class="relative hidden sm:block" id="notif-root">
+                            <button id="notif-button" class="relative inline-flex items-center justify-center p-2 text-white hover:bg-white/15 rounded-lg transition-colors duration-200" title="Bildirimler" aria-label="Bildirimler">
+                                <i class="fas fa-bell text-lg" aria-hidden="true"></i>
+                                                            </button>
+                            <div id="notif-menu" class="hidden absolute right-0 mt-2 w-80 max-w-[calc(100vw-1rem)] sm:max-w-80 bg-white dark:bg-gray-800 rounded-xl shadow-strong ring-1 ring-black ring-opacity-5 z-[10000]">
+                                <div class="px-4 py-3 flex items-center justify-between border-b border-gray-200 dark:border-gray-700">
+                                    <div class="text-sm font-semibold text-gray-800 dark:text-gray-100">Bildirimler</div>
+                                    <div class="space-x-2">
+                                        <button id="notif-mark-all" class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200">Tümünü okundu say</button>
+                                        <button id="notif-mute" class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200" title="Kategorileri sessize al">Sessize al</button>
+                                    </div>
+                                </div>
+                                <div id="notif-list" class="divide-y divide-gray-100 dark:divide-gray-700">
+                                                                            <div class="p-4 text-sm text-gray-500 dark:text-gray-400">Yeni bildirim yok</div>
+                                                                    </div>
+                                <div class="px-4 py-2 text-right border-t border-gray-200 dark:border-gray-700">
+                                    <a href="/app/notifications" class="text-xs text-primary-600">Tümünü gör</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                                                <div class="hidden sm:flex items-center space-x-2 text-sm">
+                            <div class="inline-flex items-center bg-white/15 px-3 py-1 rounded-md">
+                                <i class="fas fa-user text-white text-xs mr-1" aria-hidden="true"></i>
+                                <span class="text-white">test_admin_6910e94151bde</span>
+                            </div>
+                        </div>
+                        
+                        
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6" style="position: relative; overflow: visible;">
+        <div class="flex items-center justify-between h-14" style="position: relative; overflow: visible;">
+            <div class="sm:hidden flex items-center">
+                <button onclick="toggleMobileMenu()" 
+                        class="text-white hover:bg-white hover:bg-opacity-10 p-2 rounded transition-all duration-200" aria-label="Mobil menüyü aç/kapat">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="hidden sm:flex items-center space-x-1 flex-1 overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none; overflow-y: visible;">
+                <style>.hide-scrollbar::-webkit-scrollbar { display: none; }</style>
+                <div class="flex items-center space-x-1 hide-scrollbar" style="overflow: visible;">
+                                                                                                                            <a href="/app/"
+                               class="text-white hover:bg-white hover:bg-opacity-10 px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-all duration-200 flex items-center gap-1.5"
+                               aria-current="false">
+                                <i class="fas fa-home mr-1"></i>                                Ana                            </a>
+                                                                                                                                                    <a href="/app/calendar"
+                               class="text-white hover:bg-white hover:bg-opacity-10 px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-all duration-200 flex items-center gap-1.5"
+                               aria-current="false">
+                                <i class="fas fa-calendar mr-1"></i>                                Takvim                            </a>
+                                                                                                                                                    <a href="/app/jobs"
+                               class="text-white hover:bg-white hover:bg-opacity-10 px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-all duration-200 flex items-center gap-1.5"
+                               aria-current="false">
+                                <i class="fas fa-tasks mr-1"></i>                                İşler                            </a>
+                                                                                                                                                    <a href="/app/customers"
+                               class="text-white hover:bg-white hover:bg-opacity-10 px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-all duration-200 flex items-center gap-1.5"
+                               aria-current="false">
+                                <i class="fas fa-users mr-1"></i>                                Müşteriler                            </a>
+                                                                                                                        <div class="relative" data-dropdown="management" style="z-index: 1000;">
+                                <button id="nav-management"
+                                        onclick="return window.toggleDropdown('management', event);"
+                                        class="text-white hover:bg-white hover:bg-opacity-10 px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-all duration-200 flex items-center gap-1.5">
+                                    <i class="fas fa-briefcase mr-1"></i>                                    Yönetim                                    <i class="fas fa-chevron-down text-xs"></i>
+                                </button>
+                                <div id="dropdown-management" style="display: none; position: fixed; z-index: 9999;" class="mt-2 w-64 rounded-lg shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 py-2" onclick="event.stopPropagation();">
+                                                                                                                                                                                                                                                                                                                                <a href="/app/finance"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-chart-line w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Finans</span>
+                                            </a>
+                                                                                                                                <a href="/app/appointments"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-calendar-check w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Randevular</span>
+                                            </a>
+                                                                                                                                <a href="/app/contracts"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-file-contract w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Sözleşmeler</span>
+                                            </a>
+                                                                                                                                <a href="/app/staff"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-user-tie w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Personel</span>
+                                            </a>
+                                                                                                            </div>
+                            </div>
+                                                                                                                        <div class="relative" data-dropdown="operations" style="z-index: 1000;">
+                                <button id="nav-operations"
+                                        onclick="return window.toggleDropdown('operations', event);"
+                                        class="text-white hover:bg-white hover:bg-opacity-10 px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-all duration-200 flex items-center gap-1.5">
+                                    <i class="fas fa-cogs mr-1"></i>                                    Operasyon                                    <i class="fas fa-chevron-down text-xs"></i>
+                                </button>
+                                <div id="dropdown-operations" style="display: none; position: fixed; z-index: 9999;" class="mt-2 w-64 rounded-lg shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 py-2" onclick="event.stopPropagation();">
+                                                                                                                                                                                                                                                                                                                                <a href="/app/recurring"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-redo w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Periyodik</span>
+                                            </a>
+                                                                                                                                <a href="/app/services"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-concierge-bell w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Hizmetler</span>
+                                            </a>
+                                                                                                            </div>
+                            </div>
+                                                                                                                                                    <a href="/app/analytics"
+                               class="text-white hover:bg-white hover:bg-opacity-10 px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-all duration-200 flex items-center gap-1.5"
+                               aria-current="false">
+                                <i class="fas fa-analytics mr-1"></i>                                Analitik                            </a>
+                                                                                                                        <div class="relative" data-dropdown="reports" style="z-index: 1000;">
+                                <button id="nav-reports"
+                                        onclick="return window.toggleDropdown('reports', event);"
+                                        class="text-white hover:bg-white hover:bg-opacity-10 px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-all duration-200 flex items-center gap-1.5">
+                                    <i class="fas fa-chart-bar mr-1"></i>                                    Raporlar                                    <i class="fas fa-chevron-down text-xs"></i>
+                                </button>
+                                <div id="dropdown-reports" style="display: none; position: fixed; z-index: 9999;" class="mt-2 w-64 rounded-lg shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 py-2" onclick="event.stopPropagation();">
+                                                                                                                                                                                                                                                                                                                                <a href="/app/reports"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-list w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Tüm Raporlar</span>
+                                            </a>
+                                                                                                                                <a href="/app/reports/financial"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-money-bill-wave w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Finansal Rapor</span>
+                                            </a>
+                                                                                                                                <a href="/app/reports/jobs"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-tasks w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>İş Raporu</span>
+                                            </a>
+                                                                                                                                <a href="/app/reports/customers"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-users w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Müşteri Raporu</span>
+                                            </a>
+                                                                                                                                <a href="/app/reports/services"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-concierge-bell w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Hizmet Analizi</span>
+                                            </a>
+                                                                                                                                <a href="/app/export"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-download w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Veri Dışa Aktarma</span>
+                                            </a>
+                                                                                                            </div>
+                            </div>
+                                                                                                                        <div class="relative" data-dropdown="settings" style="z-index: 1000;">
+                                <button id="nav-settings"
+                                        onclick="return window.toggleDropdown('settings', event);"
+                                        class="text-white hover:bg-white hover:bg-opacity-10 px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-all duration-200 flex items-center gap-1.5">
+                                    <i class="fas fa-cog mr-1"></i>                                    Ayarlar                                    <i class="fas fa-chevron-down text-xs"></i>
+                                </button>
+                                <div id="dropdown-settings" style="display: none; position: fixed; z-index: 9999;" class="mt-2 w-64 rounded-lg shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 py-2" onclick="event.stopPropagation();">
+                                                                                                                                                                                                                                                                                                                                <a href="/app/settings/profile"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-user w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Profil</span>
+                                            </a>
+                                                                                                                                <a href="/app/settings/security"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-shield-alt w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Güvenlik</span>
+                                            </a>
+                                                                                                                                <a href="/app/settings/users"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-users w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Kullanıcılar</span>
+                                            </a>
+                                                                                                                                <a href="/app/settings/monitoring"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-chart-line w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>İzleme</span>
+                                            </a>
+                                                                                                                                <a href="/app/settings/logs"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-file-alt w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Loglar</span>
+                                            </a>
+                                                                                                                                <a href="/app/settings/backup"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-database w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Yedekleme</span>
+                                            </a>
+                                                                                                                                <a href="/app/admin/emails/logs"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-envelope w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Email Logları</span>
+                                            </a>
+                                                                                                                                <a href="/app/admin/emails/queue"
+                                               class="flex items-center gap-2 px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+                                                <i class="fas fa-list w-4 text-primary-500 dark:text-primary-300"></i>                                                <span>Email Queue</span>
+                                            </a>
+                                                                                                            </div>
+                            </div>
+                                                            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" style="display: none;" class="sm:hidden mobile-nav border-t border-white/20">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+                                                                            <a href="/app/"
+                       class="mobile-nav__link ">
+                        <i class="fas fa-home"></i>                        <span>Ana</span>
+                    </a>
+                                                                                                <a href="/app/calendar"
+                       class="mobile-nav__link ">
+                        <i class="fas fa-calendar"></i>                        <span>Takvim</span>
+                    </a>
+                                                                                                <a href="/app/jobs"
+                       class="mobile-nav__link ">
+                        <i class="fas fa-tasks"></i>                        <span>İşler</span>
+                    </a>
+                                                                                                <a href="/app/customers"
+                       class="mobile-nav__link ">
+                        <i class="fas fa-users"></i>                        <span>Müşteriler</span>
+                    </a>
+                                                                                                <div class="mobile-nav__section-header">
+                        <i class="fas fa-briefcase"></i>                        <span>Yönetim</span>
+                    </div>
+                                                                        <details class="mobile-nav__section" id="section-management">
+                        <summary class="mobile-nav__section-trigger flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-white/10 text-white text-sm">
+                            <span class="inline-flex items-center gap-2">
+                                <i class="fas fa-briefcase"></i>                                Yönetim                            </span>
+                            <i class="fas fa-chevron-down text-xs opacity-70"></i>
+                        </summary>
+                        <div class="mobile-nav__section-body mt-1 space-y-1">
+                                                                                                                                                                    <a href="/app/finance"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-chart-line"></i>                                        <span>Finans</span>
+                                    </a>
+                                                                                                        <a href="/app/appointments"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-calendar-check"></i>                                        <span>Randevular</span>
+                                    </a>
+                                                                                                        <a href="/app/contracts"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-file-contract"></i>                                        <span>Sözleşmeler</span>
+                                    </a>
+                                                                                                        <a href="/app/staff"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-user-tie"></i>                                        <span>Personel</span>
+                                    </a>
+                                                                                    </div>
+                    </details>
+                                            <div class="mobile-nav__divider"></div>
+                                                                                                    <div class="mobile-nav__section-header">
+                        <i class="fas fa-cogs"></i>                        <span>Operasyon</span>
+                    </div>
+                                                                        <details class="mobile-nav__section" id="section-operations">
+                        <summary class="mobile-nav__section-trigger flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-white/10 text-white text-sm">
+                            <span class="inline-flex items-center gap-2">
+                                <i class="fas fa-cogs"></i>                                Operasyon                            </span>
+                            <i class="fas fa-chevron-down text-xs opacity-70"></i>
+                        </summary>
+                        <div class="mobile-nav__section-body mt-1 space-y-1">
+                                                                                                                                                                    <a href="/app/recurring"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-redo"></i>                                        <span>Periyodik</span>
+                                    </a>
+                                                                                                        <a href="/app/services"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-concierge-bell"></i>                                        <span>Hizmetler</span>
+                                    </a>
+                                                                                    </div>
+                    </details>
+                                            <div class="mobile-nav__divider"></div>
+                                                                                                    <a href="/app/analytics"
+                       class="mobile-nav__link ">
+                        <i class="fas fa-analytics"></i>                        <span>Analitik</span>
+                    </a>
+                                                                                                <div class="mobile-nav__section-header">
+                        <i class="fas fa-chart-bar"></i>                        <span>Raporlar</span>
+                    </div>
+                                                                        <details class="mobile-nav__section" id="section-reports">
+                        <summary class="mobile-nav__section-trigger flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-white/10 text-white text-sm">
+                            <span class="inline-flex items-center gap-2">
+                                <i class="fas fa-chart-bar"></i>                                Raporlar                            </span>
+                            <i class="fas fa-chevron-down text-xs opacity-70"></i>
+                        </summary>
+                        <div class="mobile-nav__section-body mt-1 space-y-1">
+                                                                                                                                                                    <a href="/app/reports"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-list"></i>                                        <span>Tüm Raporlar</span>
+                                    </a>
+                                                                                                        <a href="/app/reports/financial"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-money-bill-wave"></i>                                        <span>Finansal Rapor</span>
+                                    </a>
+                                                                                                        <a href="/app/reports/jobs"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-tasks"></i>                                        <span>İş Raporu</span>
+                                    </a>
+                                                                                                        <a href="/app/reports/customers"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-users"></i>                                        <span>Müşteri Raporu</span>
+                                    </a>
+                                                                                                        <a href="/app/reports/services"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-concierge-bell"></i>                                        <span>Hizmet Analizi</span>
+                                    </a>
+                                                                                                        <a href="/app/export"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-download"></i>                                        <span>Veri Dışa Aktarma</span>
+                                    </a>
+                                                                                    </div>
+                    </details>
+                                            <div class="mobile-nav__divider"></div>
+                                                                                                    <div class="mobile-nav__section-header">
+                        <i class="fas fa-cog"></i>                        <span>Ayarlar</span>
+                    </div>
+                                                                        <details class="mobile-nav__section" id="section-settings">
+                        <summary class="mobile-nav__section-trigger flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-white/10 text-white text-sm">
+                            <span class="inline-flex items-center gap-2">
+                                <i class="fas fa-cog"></i>                                Ayarlar                            </span>
+                            <i class="fas fa-chevron-down text-xs opacity-70"></i>
+                        </summary>
+                        <div class="mobile-nav__section-body mt-1 space-y-1">
+                                                                                                                                                                    <a href="/app/settings/profile"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-user"></i>                                        <span>Profil</span>
+                                    </a>
+                                                                                                        <a href="/app/settings/security"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-shield-alt"></i>                                        <span>Güvenlik</span>
+                                    </a>
+                                                                                                        <a href="/app/settings/users"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-users"></i>                                        <span>Kullanıcılar</span>
+                                    </a>
+                                                                                                        <a href="/app/settings/monitoring"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-chart-line"></i>                                        <span>İzleme</span>
+                                    </a>
+                                                                                                        <a href="/app/settings/logs"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-file-alt"></i>                                        <span>Loglar</span>
+                                    </a>
+                                                                                                        <a href="/app/settings/backup"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-database"></i>                                        <span>Yedekleme</span>
+                                    </a>
+                                                                                                        <a href="/app/admin/emails/logs"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-envelope"></i>                                        <span>Email Logları</span>
+                                    </a>
+                                                                                                        <a href="/app/admin/emails/queue"
+                                       class="mobile-nav__sublink ">
+                                        <i class="fas fa-list"></i>                                        <span>Email Queue</span>
+                                    </a>
+                                                                                    </div>
+                    </details>
+                                                
+                    </div>
+    </div>
+</nav>
+
+    
+    
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:bg-primary-600 focus:text-white focus:p-2 focus:z-50 focus:rounded-br-md">
+        Ana içeriğe atla
+    </a>
+
+    <!-- New UI sidebar -->
+    
+    <!-- Main Content -->
+    <main id="main-content" class="py-4 sm:py-6 bg-gray-50 dark:bg-gray-900 flex-1 " role="main">
+        <!-- ARIA live regions for global form status and errors -->
+        <div aria-live="polite" aria-atomic="true" class="sr-only" id="aria-status-region"></div>
+        <div aria-live="assertive" aria-atomic="true" class="sr-only" id="aria-error-region"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Flash Messages -->
+                        
+            <!-- Page Content -->
+            <div class="fade-in">
+                
+<div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 py-6 space-y-6">
+    <div class="dashboard-hero space-y-5" id="portal-actions">
+        <div class="dashboard-hero__badges">
+            <span class="badge-chip"><i class="fas fa-user-shield"></i> Sakin Portalı</span>
+            <span class="badge-chip"><i class="fas fa-coins"></i> Şeffaf Muhasebe</span>
+            <span class="badge-chip"><i class="fas fa-mobile-alt"></i> Mobil Yönetim</span>
+        </div>
+        <div class="dashboard-hero__context">
+            <h1 class="fluid-h1 font-semibold text-slate-900 dark:text-white">Sakin Yönetimi &amp; Portal</h1>
+            <p class="text-sm md:text-base text-slate-600 dark:text-slate-300 max-w-3xl">
+                Portal erişimleri, sakin deneyimi ve talepler tek panelde. Aidat, duyuru ve bakım süreçlerini mobil üzerinden anında başlatın.
+            </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2 md:gap-3">
+            <a href="/app/portal/login" class="quick-action-btn variant-management" target="_blank" rel="noopener">
+                <i class="fas fa-door-open"></i>
+                <span>Portal Girişini Aç</span>
+            </a>
+            <a href="/app/management-fees" class="quick-action-btn variant-management">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Aidat Gönder</span>
+            </a>
+            <a href="/app/announcements/create" class="quick-action-btn variant-management">
+                <i class="fas fa-bullhorn"></i>
+                <span>Duyuru Gönder</span>
+            </a>
+            <a href="#resident-requests" class="quick-action-btn variant-management">
+                <i class="fas fa-comments"></i>
+                <span>Talepleri Yönet</span>
+            </a>
+            <a href="#pending-verifications" class="quick-action-btn variant-management">
+                <i class="fas fa-envelope-open-text"></i>
+                <span>Davet Gönder</span>
+            </a>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+            <span class="stat-chip"><i class="fas fa-users"></i> 14 toplam sakin</span>
+            <span class="stat-chip"><i class="fas fa-check-circle"></i> 3 doğrulanmış</span>
+            <span class="stat-chip pill-indicator--warning"><i class="fas fa-bell"></i> 1 açık talep</span>
+        </div>
+    </div>
+
+    
+    <form method="get" class="grid gap-4 md:grid-cols-[2fr,2fr,auto] items-end bg-white/80 dark:bg-slate-900/70 border border-white/30 dark:border-slate-800 rounded-2xl px-4 py-4 backdrop-blur shadow-soft">
+        <div>
+            <label for="resident-search" class="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Arama</label>
+            <input
+                id="resident-search"
+                name="search"
+                type="search"
+                value="NoMatch6910e941ed8ac"
+                class="mt-1 w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/60 px-3 py-2 text-sm text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                placeholder="İsim, email veya daire numarası..."
+            >
+        </div>
+        <div>
+            <label for="resident-building" class="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Bina</label>
+            <select
+                id="resident-building"
+                name="building_id"
+                class="mt-1 w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/60 px-3 py-2 text-sm text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            >
+                <option value="">Tümü</option>
+                                    <option value="258">
+                        Demo Residence                    </option>
+                                    <option value="324">
+                        Portal Tower 6910e9415d5a7                    </option>
+                                    <option value="4">
+                        Test Building 690f49f04948f                    </option>
+                                    <option value="5">
+                        Test Building 690f49f04988d                    </option>
+                                    <option value="9">
+                        Test Building 690f4c6fcc841                    </option>
+                                    <option value="325">
+                        Yedek Plaza 6910e9415d5d6                    </option>
+                            </select>
+        </div>
+        <div class="flex items-center gap-2">
+            <button type="submit" class="quick-action-btn variant-management px-4">
+                <i class="fas fa-filter"></i>
+                <span>Filtrele</span>
+            </button>
+            <a href="/app/management/residents" class="quick-action-btn px-4" style="--header-quick-bg: rgba(148, 163, 184, 0.18); --header-quick-border: rgba(148, 163, 184, 0.32); --header-quick-text: #1e293b;">
+                <i class="fas fa-rotate-left"></i>
+                <span>Sıfırla</span>
+            </a>
+        </div>
+    </form>
+
+    <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4" id="portal-overview">
+        <div class="kpi-card">
+            <div class="kpi-label text-emerald-500">Toplam Sakin</div>
+            <div class="fluid-kpi font-bold text-slate-900 dark:text-white">14</div>
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+                Aktif: 14 · Pasif: 0            </p>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label text-sky-500">Portal Kullanımı</div>
+            <div class="fluid-kpi font-bold text-sky-600 dark:text-sky-300">2</div>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Son giriş yapan sakin sayısı</p>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label text-indigo-500">Email Doğrulaması</div>
+            <div class="fluid-kpi font-bold text-indigo-600 dark:text-indigo-300">3</div>
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+                Doğrulanmış · Bekleyen: 11            </p>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label text-rose-500">Talepler</div>
+            <div class="fluid-kpi font-bold text-rose-600 dark:text-rose-300">1</div>
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+                Toplam: 1 · Çözümde: 0            </p>
+        </div>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-2">
+        <section id="pending-verifications" class="rounded-3xl bg-white/90 dark:bg-slate-900/80 backdrop-blur border border-white/20 dark:border-slate-800 shadow-soft overflow-hidden">
+            <div class="flex items-center justify-between border-b border-white/20 dark:border-slate-800 px-5 py-4">
+                <div>
+                    <h2 class="text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Son Portal Girişleri</h2>
+                    <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">En son giriş yapan 8 sakin</p>
+                </div>
+                <a href="/app/resident/dashboard" class="text-xs text-indigo-500 hover:text-indigo-600">Sakin Paneline Git</a>
+            </div>
+                        <div class="divide-y divide-slate-100 dark:divide-slate-800 hidden md:block">
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 10</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e941dd424@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Portal Tower 6910e9415d5a7 · Daire A1                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Son giriş:<br><span class="font-semibold text-slate-600 dark:text-slate-300">—</span>
+                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 9</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e941d1a2c@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Portal Tower 6910e9415d5a7 · Daire A1                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Son giriş:<br><span class="font-semibold text-slate-600 dark:text-slate-300">—</span>
+                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 8</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e941c6076@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Portal Tower 6910e9415d5a7 · Daire A1                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Son giriş:<br><span class="font-semibold text-slate-600 dark:text-slate-300">—</span>
+                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 7</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e941ba70b@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Portal Tower 6910e9415d5a7 · Daire A1                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Son giriş:<br><span class="font-semibold text-slate-600 dark:text-slate-300">—</span>
+                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 6</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e941aed13@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Portal Tower 6910e9415d5a7 · Daire A1                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Son giriş:<br><span class="font-semibold text-slate-600 dark:text-slate-300">—</span>
+                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 5</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e941a32a5@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Portal Tower 6910e9415d5a7 · Daire A1                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Son giriş:<br><span class="font-semibold text-slate-600 dark:text-slate-300">—</span>
+                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 4</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e9419765d@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Portal Tower 6910e9415d5a7 · Daire A1                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Son giriş:<br><span class="font-semibold text-slate-600 dark:text-slate-300">—</span>
+                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 3</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e9418bcba@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Portal Tower 6910e9415d5a7 · Daire A1                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Son giriş:<br><span class="font-semibold text-slate-600 dark:text-slate-300">—</span>
+                    </div>
+                </div>
+                            </div>
+            <div class="mobile-card-grid md:hidden">
+                                                <div class="mobile-card mobile-card--sky">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 10</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e941dd424@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-arrow-right-to-bracket"></i> —</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--sky">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 9</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e941d1a2c@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-arrow-right-to-bracket"></i> —</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--sky">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 8</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e941c6076@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-arrow-right-to-bracket"></i> —</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--sky">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 7</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e941ba70b@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-arrow-right-to-bracket"></i> —</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--sky">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 6</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e941aed13@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-arrow-right-to-bracket"></i> —</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--sky">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 5</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e941a32a5@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-arrow-right-to-bracket"></i> —</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--sky">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 4</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e9419765d@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-arrow-right-to-bracket"></i> —</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--sky">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 3</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e9418bcba@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-arrow-right-to-bracket"></i> —</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                </div>
+                            </div>
+                    </section>
+
+        <section class="rounded-3xl bg-white/90 dark:bg-slate-900/80 backdrop-blur border border-white/20 dark:border-slate-800 shadow-soft overflow-hidden">
+            <div class="flex items-center justify-between border-b border-white/20 dark:border-slate-800 px-5 py-4">
+                <div>
+                    <h2 class="text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Email Doğrulaması Beklenenler</h2>
+                    <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">En son davet gönderilen sakinler</p>
+                </div>
+                <button class="text-xs text-indigo-500 hover:text-indigo-600" type="button" onclick="window.dispatchEvent(new CustomEvent('residents:resend-invite'))">
+                    Daveti Yeniden Gönder
+                </button>
+            </div>
+                    <div class="divide-y divide-slate-100 dark:divide-slate-800 hidden md:block">
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 10</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e941dd424@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Davet gönderildi: 09.11.2025 22:13                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Portal Tower 6910e9415d5a7 · Daire A1                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 9</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e941d1a2c@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Davet gönderildi: 09.11.2025 22:13                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Portal Tower 6910e9415d5a7 · Daire A1                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 8</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e941c6076@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Davet gönderildi: 09.11.2025 22:13                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Portal Tower 6910e9415d5a7 · Daire A1                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 7</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e941ba70b@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Davet gönderildi: 09.11.2025 22:13                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Portal Tower 6910e9415d5a7 · Daire A1                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 6</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e941aed13@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Davet gönderildi: 09.11.2025 22:12                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Portal Tower 6910e9415d5a7 · Daire A1                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 5</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e941a32a5@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Davet gönderildi: 09.11.2025 22:12                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Portal Tower 6910e9415d5a7 · Daire A1                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 4</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e9419765d@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Davet gönderildi: 09.11.2025 22:12                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Portal Tower 6910e9415d5a7 · Daire A1                    </div>
+                </div>
+                                <div class="px-5 py-4 flex items-start justify-between gap-3">
+                    <div>
+                        <div class="text-sm font-semibold text-slate-900 dark:text-white">Portal Extra 3</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">resident-extra+6910e9418bcba@example.com</div>
+                        <div class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                            Davet gönderildi: 09.11.2025 22:12                        </div>
+                    </div>
+                    <div class="text-xs text-right text-slate-500 dark:text-slate-400">
+                        Portal Tower 6910e9415d5a7 · Daire A1                    </div>
+                </div>
+                            </div>
+            <div class="mobile-card-grid md:hidden">
+                                                <div class="mobile-card mobile-card--amber">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 10</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e941dd424@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-envelope"></i> 09.11.2025 22:13</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                    <div class="mobile-card__footer">
+                        <button type="button" onclick="window.dispatchEvent(new CustomEvent('residents:resend-invite'))">Daveti Yeniden Gönder</button>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--amber">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 9</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e941d1a2c@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-envelope"></i> 09.11.2025 22:13</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                    <div class="mobile-card__footer">
+                        <button type="button" onclick="window.dispatchEvent(new CustomEvent('residents:resend-invite'))">Daveti Yeniden Gönder</button>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--amber">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 8</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e941c6076@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-envelope"></i> 09.11.2025 22:13</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                    <div class="mobile-card__footer">
+                        <button type="button" onclick="window.dispatchEvent(new CustomEvent('residents:resend-invite'))">Daveti Yeniden Gönder</button>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--amber">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 7</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e941ba70b@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-envelope"></i> 09.11.2025 22:13</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                    <div class="mobile-card__footer">
+                        <button type="button" onclick="window.dispatchEvent(new CustomEvent('residents:resend-invite'))">Daveti Yeniden Gönder</button>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--amber">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 6</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e941aed13@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-envelope"></i> 09.11.2025 22:12</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                    <div class="mobile-card__footer">
+                        <button type="button" onclick="window.dispatchEvent(new CustomEvent('residents:resend-invite'))">Daveti Yeniden Gönder</button>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--amber">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 5</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e941a32a5@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-envelope"></i> 09.11.2025 22:12</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                    <div class="mobile-card__footer">
+                        <button type="button" onclick="window.dispatchEvent(new CustomEvent('residents:resend-invite'))">Daveti Yeniden Gönder</button>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--amber">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 4</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e9419765d@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-envelope"></i> 09.11.2025 22:12</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                    <div class="mobile-card__footer">
+                        <button type="button" onclick="window.dispatchEvent(new CustomEvent('residents:resend-invite'))">Daveti Yeniden Gönder</button>
+                    </div>
+                </div>
+                                                <div class="mobile-card mobile-card--amber">
+                    <div class="mobile-card__header">
+                        <div class="mobile-card__avatar">PE</div>
+                        <div class="mobile-card__headline">
+                            <span class="mobile-card__name">Portal Extra 3</span>
+                            <span class="mobile-card__subtitle"><i class="fas fa-at"></i>resident-extra+6910e9418bcba@example.com</span>
+                        </div>
+                        <span class="pill-indicator mobile-card__timestamp"><i class="fas fa-envelope"></i> 09.11.2025 22:12</span>
+                    </div>
+                    <div class="mobile-card__tags">
+                        <span class="mobile-card__tag"><i class="fas fa-building"></i>Portal Tower 6910e9415d5a7 · Daire A1</span>
+                    </div>
+                    <div class="mobile-card__footer">
+                        <button type="button" onclick="window.dispatchEvent(new CustomEvent('residents:resend-invite'))">Daveti Yeniden Gönder</button>
+                    </div>
+                </div>
+                            </div>
+                </section>
+    </div>
+
+        <section class="rounded-3xl bg-white/90 dark:bg-slate-900/80 backdrop-blur border border-white/20 dark:border-slate-800 shadow-soft">
+        <div class="flex items-center justify-between border-b border-white/20 dark:border-slate-800 px-5 py-4">
+            <div>
+                <h2 class="text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Bildirim Tercihi Dağılımı</h2>
+                <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Sakinlerin e-posta ve SMS bildirim tercihleri kategori bazında</p>
+            </div>
+            <span class="text-xs text-slate-500 dark:text-slate-400">14 aktif sakin</span>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-slate-100 dark:divide-slate-800 text-sm">
+                <thead class="bg-slate-50/80 dark:bg-slate-900/60 text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    <tr>
+                        <th class="px-5 py-3 text-left font-semibold">Kategori</th>
+                        <th class="px-5 py-3 text-left font-semibold">E-posta</th>
+                        <th class="px-5 py-3 text-left font-semibold">SMS</th>
+                        <th class="px-5 py-3 text-left font-semibold">Not</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+                                                                    <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-900/50 transition-colors">
+                            <td class="px-5 py-3">
+                                <div class="font-semibold text-slate-900 dark:text-white">Aidat Hatırlatmaları</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400">Vadesi yaklaşan aidat ve ödeme hatırlatmaları.</div>
+                            </td>
+                            <td class="px-5 py-3">
+                                <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-emerald-100/70 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-200 text-xs font-semibold">
+                                    <i class="fas fa-envelope"></i>
+                                    14 / 14                                </span>
+                            </td>
+                            <td class="px-5 py-3">
+                                                                    <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-sky-100/70 dark:bg-sky-500/20 text-sky-700 dark:text-sky-200 text-xs font-semibold">
+                                        <i class="fas fa-sms"></i>
+                                        0 / 0                                    </span>
+                                                            </td>
+                            <td class="px-5 py-3 text-xs text-slate-500 dark:text-slate-400">
+                                                                    — 
+                                                            </td>
+                        </tr>
+                                                                    <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-900/50 transition-colors">
+                            <td class="px-5 py-3">
+                                <div class="font-semibold text-slate-900 dark:text-white">Toplantı Duyuruları</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400">Apartman/bina toplantı daveti ve güncellemeleri.</div>
+                            </td>
+                            <td class="px-5 py-3">
+                                <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-emerald-100/70 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-200 text-xs font-semibold">
+                                    <i class="fas fa-envelope"></i>
+                                    14 / 14                                </span>
+                            </td>
+                            <td class="px-5 py-3">
+                                                                    <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-sky-100/70 dark:bg-sky-500/20 text-sky-700 dark:text-sky-200 text-xs font-semibold">
+                                        <i class="fas fa-sms"></i>
+                                        0 / 0                                    </span>
+                                                            </td>
+                            <td class="px-5 py-3 text-xs text-slate-500 dark:text-slate-400">
+                                                                    — 
+                                                            </td>
+                        </tr>
+                                                                    <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-900/50 transition-colors">
+                            <td class="px-5 py-3">
+                                <div class="font-semibold text-slate-900 dark:text-white">Genel Duyurular</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400">Yönetim tarafından paylaşılan haber ve bilgilendirmeler.</div>
+                            </td>
+                            <td class="px-5 py-3">
+                                <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-emerald-100/70 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-200 text-xs font-semibold">
+                                    <i class="fas fa-envelope"></i>
+                                    14 / 14                                </span>
+                            </td>
+                            <td class="px-5 py-3">
+                                                                    <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-sky-100/70 dark:bg-sky-500/20 text-sky-700 dark:text-sky-200 text-xs font-semibold">
+                                        <i class="fas fa-sms"></i>
+                                        0 / 0                                    </span>
+                                                            </td>
+                            <td class="px-5 py-3 text-xs text-slate-500 dark:text-slate-400">
+                                                                    — 
+                                                            </td>
+                        </tr>
+                                                                    <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-900/50 transition-colors">
+                            <td class="px-5 py-3">
+                                <div class="font-semibold text-slate-900 dark:text-white">Acil Durum Uyarıları</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400">Acil durum, bakım ve güvenlik duyuruları.</div>
+                            </td>
+                            <td class="px-5 py-3">
+                                <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-emerald-100/70 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-200 text-xs font-semibold">
+                                    <i class="fas fa-envelope"></i>
+                                    14 / 14                                </span>
+                            </td>
+                            <td class="px-5 py-3">
+                                                                    <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-sky-100/70 dark:bg-sky-500/20 text-sky-700 dark:text-sky-200 text-xs font-semibold">
+                                        <i class="fas fa-sms"></i>
+                                        0 / 0                                    </span>
+                                                            </td>
+                            <td class="px-5 py-3 text-xs text-slate-500 dark:text-slate-400">
+                                                                    — 
+                                                            </td>
+                        </tr>
+                                                                    <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-900/50 transition-colors">
+                            <td class="px-5 py-3">
+                                <div class="font-semibold text-slate-900 dark:text-white">Talep Yanıtları</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400">İletmiş olduğunuz talepler için yanıt ve durum güncellemeleri.</div>
+                            </td>
+                            <td class="px-5 py-3">
+                                <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-emerald-100/70 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-200 text-xs font-semibold">
+                                    <i class="fas fa-envelope"></i>
+                                    14 / 14                                </span>
+                            </td>
+                            <td class="px-5 py-3">
+                                                                    <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-sky-100/70 dark:bg-sky-500/20 text-sky-700 dark:text-sky-200 text-xs font-semibold">
+                                        <i class="fas fa-sms"></i>
+                                        0 / 0                                    </span>
+                                                            </td>
+                            <td class="px-5 py-3 text-xs text-slate-500 dark:text-slate-400">
+                                                                    — 
+                                                            </td>
+                        </tr>
+                                                                    <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-900/50 transition-colors">
+                            <td class="px-5 py-3">
+                                <div class="font-semibold text-slate-900 dark:text-white">Ödeme Onayları</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400">Gerçekleştirdiğiniz ödemelerin alındı bilgisi.</div>
+                            </td>
+                            <td class="px-5 py-3">
+                                <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-emerald-100/70 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-200 text-xs font-semibold">
+                                    <i class="fas fa-envelope"></i>
+                                    14 / 14                                </span>
+                            </td>
+                            <td class="px-5 py-3">
+                                                                    <span class="text-xs text-slate-400 dark:text-slate-500">SMS yok</span>
+                                                            </td>
+                            <td class="px-5 py-3 text-xs text-slate-500 dark:text-slate-400">
+                                                                    — 
+                                                            </td>
+                        </tr>
+                                    </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <section class="rounded-3xl bg-white/90 dark:bg-slate-900/80 backdrop-blur border border-white/20 dark:border-slate-800 shadow-soft" id="resident-requests">
+        <div class="flex items-center justify-between border-b border-white/20 dark:border-slate-800 px-5 py-4">
+            <h2 class="text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Sakin Talepleri</h2>
+            <a href="/app/resident/requests" class="text-xs text-indigo-500 hover:text-indigo-600">Tüm Talepleri Gör</a>
+        </div>
+                <div class="hidden md:block overflow-x-auto">
+            <table class="min-w-full divide-y divide-slate-100 dark:divide-slate-800">
+                <thead class="bg-slate-50/80 dark:bg-slate-900/60 text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    <tr>
+                        <th class="px-5 py-3 text-left font-semibold">Sakin / Talep</th>
+                        <th class="px-5 py-3 text-left font-semibold">Tür / Öncelik</th>
+                        <th class="px-5 py-3 text-left font-semibold">Durum</th>
+                        <th class="px-5 py-3 text-right font-semibold">Oluşturulma</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-sm">
+                                        <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-900/50 transition-colors">
+                        <td class="px-5 py-3">
+                            <div class="font-semibold text-slate-900 dark:text-white">deneme</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">
+                                Ayşe Korkmaz · Demo Residence · Daire A1-01                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-slate-600 dark:text-slate-300">
+                            Maintenance                            <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-slate-100/70 text-slate-600 ml-2">
+                                <i class="fas fa-exclamation-circle"></i>
+                                Normal                            </span>
+                        </td>
+                        <td class="px-5 py-3 text-slate-600 dark:text-slate-300">
+                            Open                        </td>
+                        <td class="px-5 py-3 text-right text-slate-600 dark:text-slate-300">
+                            09.11.2025 17:06                        </td>
+                    </tr>
+                                    </tbody>
+            </table>
+        </div>
+        <div class="mobile-card-stack md:hidden">
+                                    <div class="mobile-card mobile-card--emerald">
+                <div class="mobile-card__header">
+                    <div class="mobile-card__avatar">AK</div>
+                    <div class="mobile-card__headline">
+                        <span class="mobile-card__name">deneme</span>
+                        <span class="mobile-card__subtitle"><i class="fas fa-user"></i>Ayşe Korkmaz</span>
+                    </div>
+                    <span class="pill-indicator mobile-card__timestamp">
+                        <i class="fas fa-exclamation-circle"></i> Normal                    </span>
+                </div>
+                <div class="mobile-card__tags">
+                    <span class="mobile-card__tag"><i class="fas fa-building"></i>Demo Residence · Daire A1-01</span>
+                    <span class="mobile-card__tag"><i class="fas fa-layer-group"></i>Open</span>
+                    <span class="mobile-card__tag"><i class="fas fa-clock"></i>09.11.2025 17:06</span>
+                </div>
+            </div>
+                    </div>
+            </section>
+
+    <section class="rounded-3xl bg-white/90 dark:bg-slate-900/80 backdrop-blur border border-white/20 dark:border-slate-800 shadow-soft">
+        <div class="flex items-center justify-between border-b border-white/20 dark:border-slate-800 px-5 py-4">
+            <div>
+                <h2 class="text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Sakin Listesi (İlk 25)</h2>
+                <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Detaylı liste için sakin panelini kullanabilirsiniz.</p>
+            </div>
+            <a href="/app/resident/dashboard" class="text-xs text-indigo-500 hover:text-indigo-600">
+                Sakin Paneline Git
+            </a>
+        </div>
+                <div class="px-5 py-6">
+            
+<div class="empty-state text-center py-12 px-4">
+    <div class="empty-state-icon mb-6">
+        <i class="fas fa-solid fa-people-roof text-6xl text-gray-300 dark:text-gray-600"></i>
+    </div>
+    
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+        Tanımlı sakin bulunmuyor    </h3>
+        
+        <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
+        Yeni sakin oluşturduğunuzda burada listelenecek.    </p>
+        
+        
+    </div>
+
+<style>
+.empty-state {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-state-icon {
+    opacity: 0.5;
+}
+</style>
+
+        </div>
+            </section>
+
+    </div>
+
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-6">
+            <!-- Şirket Bilgileri -->
+            <div class="col-span-1 md:col-span-2">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                    <i class="fas fa-building mr-2 text-primary-600"></i>
+                    Küre Temizlik
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                    Profesyonel temizlik hizmetleri ve iş takip sistemi
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors" title="Facebook">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors" title="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors" title="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hızlı Linkler -->
+            <div>
+                <h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-4">Hızlı Linkler</h4>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="/app/appointments" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 transition-colors flex items-center">
+                            <i class="fas fa-calendar-alt mr-2 text-xs"></i>Randevular
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/app/jobs" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 transition-colors flex items-center">
+                            <i class="fas fa-tasks mr-2 text-xs"></i>İşler
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/app/customers" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 transition-colors flex items-center">
+                            <i class="fas fa-users mr-2 text-xs"></i>Müşteriler
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/app/finance" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 transition-colors flex items-center">
+                            <i class="fas fa-chart-line mr-2 text-xs"></i>Finans
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Sistem Bilgileri -->
+            <div>
+                <h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-4">Sistem</h4>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                    <li class="flex items-center">
+                        <i class="fas fa-circle text-green-500 mr-2 text-xs"></i>
+                        <span>Sistem Aktif</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>09.11.2025 22:19</span>
+                    </li>
+                                        <li class="flex items-center">
+                        <i class="fas fa-user mr-2"></i>
+                        <span>test_admin_6910e94151bde</span>
+                    </li>
+                                        <li>
+                        <a href="/app/settings" class="hover:text-primary-600 transition-colors flex items-center">
+                            <i class="fas fa-cog mr-2"></i>Ayarlar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Alt Kısım -->
+        <div class="border-t border-gray-200 dark:border-gray-700 pt-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 md:mb-0">
+                    &copy; 2025 Küre Temizlik. Tüm hakları saklıdır.
+                </p>
+                <div class="flex items-center space-x-6 text-sm text-gray-600 dark:text-gray-400">
+                    <a href="#" class="hover:text-primary-600 transition-colors">Gizlilik Politikası</a>
+                    <a href="#" class="hover:text-primary-600 transition-colors">Kullanım Şartları</a>
+                    <span class="hidden md:inline">•</span>
+                    <span>v1.0.0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    <!-- Floating Action Button (Mobile) -->
+        <!-- ===== KOZMOS_OPERATOR_READONLY: hide floating action button for operator (begin) -->
+        <div class="fixed bottom-6 right-6 md:hidden">
+        <div x-data="{ showActions: false }" class="relative">
+            <!-- Action Menu -->
+            <div x-show="showActions" x-cloak class="absolute bottom-16 right-0 mb-2 space-y-2">
+                <a href="/app/jobs/new" 
+                   class="block bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+                   aria-label="Yeni iş oluştur">
+                    <i class="fas fa-plus"></i>
+                </a>
+                <a href="/app/customers/new" 
+                   class="block bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors"
+                   aria-label="Yeni müşteri ekle">
+                    <i class="fas fa-user-plus"></i>
+                </a>
+                <a href="/app/finance/new" 
+                   class="block bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition-colors"
+                   aria-label="Yeni finans kaydı ekle">
+                    <i class="fas fa-money-bill"></i>
+                </a>
+            </div>
+            
+            <!-- Main FAB -->
+            <button @click="showActions = !showActions" 
+                    class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+                    aria-label="Hızlı işlemler menüsünü aç"
+                    :aria-expanded="showActions">
+                <i class="fas fa-plus text-xl"></i>
+            </button>
+        </div>
+    </div>
+        <!-- ===== KOZMOS_OPERATOR_READONLY: hide floating action button for operator (end) -->
+    
+    <!-- Scripts -->
+    <script>
+        // Auto-hide flash messages
+        document.addEventListener('DOMContentLoaded', function() {
+            const flashMessages = document.querySelectorAll('.flash-message, .bg-green-50.border.border-green-200, .bg-red-50.border.border-red-200');
+            flashMessages.forEach(function(message) {
+                setTimeout(function() {
+                    message.style.transition = 'opacity 0.5s';
+                    message.style.opacity = '0';
+                    setTimeout(function() {
+                        message.remove();
+                    }, 500);
+                }, 10000); // 10 saniye olarak artırıldı
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuButton = event.target.closest('[onclick*="toggleMobileMenu"]');
+            
+            if (mobileMenu && !mobileMenu.contains(event.target) && !mobileMenuButton) {
+                mobileMenu.style.display = 'none';
+            }
+        });
+        
+        // Global loading functions
+        window.showGlobalLoading = function() {
+            const overlay = document.getElementById('globalLoading');
+            if (overlay) {
+                overlay.classList.remove('hidden');
+                overlay.classList.add('flex');
+            }
+        };
+        
+        window.hideGlobalLoading = function() {
+            const overlay = document.getElementById('globalLoading');
+            if (overlay) {
+                overlay.classList.add('hidden');
+                overlay.classList.remove('flex');
+            }
+        };
+    </script>
+
+    <!-- Global Loading Overlay -->
+    <div id="globalLoading" class="fixed inset-0 bg-black bg-opacity-30 z-50 hidden items-center justify-center">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-strong p-6 flex items-center space-x-3">
+            <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-primary-600"></div>
+            <span class="text-gray-700 dark:text-gray-300">Yükleniyor...</span>
+        </div>
+    </div>
+
+        <!-- Modern Confirmation Dialog -->
+    
+<!-- Modern Confirmation Dialog -->
+<div x-data="confirmationDialog()" 
+     x-show="show" 
+     x-transition:enter="transition ease-out duration-300"
+     x-transition:enter-start="opacity-0"
+     x-transition:enter-end="opacity-100"
+     x-transition:leave="transition ease-in duration-200"
+     x-transition:leave-start="opacity-100"
+     x-transition:leave-end="opacity-0"
+     class="fixed inset-0 z-50 overflow-y-auto"
+     style="display: none;"
+     @keydown.escape="cancel()">
+    
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity" @click="cancel()"></div>
+        
+        <!-- Dialog -->
+        <div class="inline-block align-bottom bg-white dark:bg-gray-800 rounded-2xl text-left overflow-hidden shadow-strong transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div class="bg-white dark:bg-gray-800 px-6 pt-6 pb-4 sm:p-8 sm:pb-6">
+                <div class="sm:flex sm:items-start">
+                    <!-- Icon -->
+                    <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-xl bg-red-100 dark:bg-red-900/20 sm:mx-0 sm:h-10 sm:w-10">
+                        <i class="fas fa-exclamation-triangle text-red-600 dark:text-red-400 text-lg"></i>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" x-text="title">
+                            Onay Gerekli
+                        </h3>
+                        <div class="mt-2">
+                            <p class="text-sm text-gray-500 dark:text-gray-400" x-text="message">
+                                Bu işlemi gerçekleştirmek istediğinizden emin misiniz?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Actions -->
+            <div class="bg-gray-50 dark:bg-gray-700 px-6 py-4 sm:px-8 sm:flex sm:flex-row-reverse gap-3">
+                <button type="button" 
+                        @click="confirm()"
+                        class="w-full inline-flex justify-center items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-soft hover:shadow-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 sm:ml-3 sm:w-auto">
+                    <i class="fas fa-check mr-2"></i>
+                    <span x-text="confirmText">Evet, Sil</span>
+                </button>
+                <button type="button" 
+                        @click="cancel()"
+                        class="mt-3 w-full inline-flex justify-center items-center px-6 py-3 bg-white dark:bg-gray-600 hover:bg-gray-50 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-200 font-semibold rounded-lg border border-gray-300 dark:border-gray-500 shadow-soft hover:shadow-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 sm:mt-0 sm:w-auto">
+                    <i class="fas fa-times mr-2"></i>
+                    <span x-text="cancelText">İptal</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function confirmationDialog() {
+    return {
+        show: false,
+        title: 'Onay Gerekli',
+        message: 'Bu işlemi gerçekleştirmek istediğinizden emin misiniz?',
+        confirmText: 'Evet, Sil',
+        cancelText: 'İptal',
+        onConfirm: null,
+        onCancel: null,
+        
+        init() {
+            // Global function to show confirmation dialog
+            window.showConfirmation = (options) => {
+                this.title = options.title || 'Onay Gerekli';
+                this.message = options.message || 'Bu işlemi gerçekleştirmek istediğinizden emin misiniz?';
+                this.confirmText = options.confirmText || 'Evet, Sil';
+                this.cancelText = options.cancelText || 'İptal';
+                this.onConfirm = options.onConfirm || null;
+                this.onCancel = options.onCancel || null;
+                this.show = true;
+                
+                // Focus management
+                this.$nextTick(() => {
+                    const confirmButton = this.$el.querySelector('button[type="button"]:first-of-type');
+                    if (confirmButton) {
+                        confirmButton.focus();
+                    }
+                });
+            };
+        },
+        
+        confirm() {
+            if (this.onConfirm && typeof this.onConfirm === 'function') {
+                this.onConfirm();
+            }
+            this.show = false;
+        },
+        
+        cancel() {
+            if (this.onCancel && typeof this.onCancel === 'function') {
+                this.onCancel();
+            }
+            this.show = false;
+        }
+    };
+}
+</script>
+    
+    <!-- Modern Alert Dialog -->
+    
+<!-- Modern Alert Dialog -->
+<div x-data="alertDialog()" 
+     x-show="show" 
+     x-transition:enter="transition ease-out duration-300"
+     x-transition:enter-start="opacity-0"
+     x-transition:enter-end="opacity-100"
+     x-transition:leave="transition ease-in duration-200"
+     x-transition:leave-start="opacity-100"
+     x-transition:leave-end="opacity-0"
+     class="fixed inset-0 z-50 overflow-y-auto"
+     style="display: none;"
+     @keydown.escape="close()">
+    
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity" @click="close()"></div>
+        
+        <!-- Dialog -->
+        <div class="inline-block align-bottom bg-white dark:bg-gray-800 rounded-2xl text-left overflow-hidden shadow-strong transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div class="bg-white dark:bg-gray-800 px-6 pt-6 pb-4 sm:p-8 sm:pb-6">
+                <div class="sm:flex sm:items-start">
+                    <!-- Icon -->
+                    <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-xl sm:mx-0 sm:h-10 sm:w-10"
+                         :class="iconClass">
+                        <i class="fas text-lg" :class="iconName"></i>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
+                        <h3 class="text-xl font-bold mb-2" :class="titleClass" x-text="title">
+                            Bilgi
+                        </h3>
+                        <div class="mt-2">
+                            <p class="text-sm text-gray-500 dark:text-gray-400" x-text="message">
+                                Mesaj burada görünecek.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Actions -->
+            <div class="bg-gray-50 dark:bg-gray-700 px-6 py-4 sm:px-8 sm:flex sm:flex-row-reverse">
+                <button type="button" 
+                        @click="close()"
+                        class="w-full inline-flex justify-center items-center px-6 py-3 font-semibold rounded-lg shadow-soft hover:shadow-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-gray-800 sm:ml-3 sm:w-auto"
+                        :class="buttonClass">
+                    <i class="fas fa-check mr-2"></i>
+                    <span x-text="buttonText">Tamam</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function alertDialog() {
+    return {
+        show: false,
+        title: 'Bilgi',
+        message: 'Mesaj burada görünecek.',
+        type: 'info', // info, success, warning, error
+        buttonText: 'Tamam',
+        onClose: null,
+        
+        get iconClass() {
+            const classes = {
+                'info': 'bg-blue-100 dark:bg-blue-900/20',
+                'success': 'bg-green-100 dark:bg-green-900/20',
+                'warning': 'bg-yellow-100 dark:bg-yellow-900/20',
+                'error': 'bg-red-100 dark:bg-red-900/20'
+            };
+            return classes[this.type] || classes['info'];
+        },
+        
+        get iconName() {
+            const icons = {
+                'info': 'fa-info-circle text-blue-600 dark:text-blue-400',
+                'success': 'fa-check-circle text-green-600 dark:text-green-400',
+                'warning': 'fa-exclamation-triangle text-yellow-600 dark:text-yellow-400',
+                'error': 'fa-times-circle text-red-600 dark:text-red-400'
+            };
+            return icons[this.type] || icons['info'];
+        },
+        
+        get titleClass() {
+            const classes = {
+                'info': 'text-blue-900 dark:text-blue-100',
+                'success': 'text-green-900 dark:text-green-100',
+                'warning': 'text-yellow-900 dark:text-yellow-100',
+                'error': 'text-red-900 dark:text-red-100'
+            };
+            return classes[this.type] || classes['info'];
+        },
+        
+        get buttonClass() {
+            const classes = {
+                'info': 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
+                'success': 'bg-green-600 hover:bg-green-700 text-white focus:ring-green-500',
+                'warning': 'bg-yellow-600 hover:bg-yellow-700 text-white focus:ring-yellow-500',
+                'error': 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500'
+            };
+            return classes[this.type] || classes['info'];
+        },
+        
+        init() {
+            // Global function to show alert dialog
+            window.showAlert = (options) => {
+                this.title = options.title || 'Bilgi';
+                this.message = options.message || 'Mesaj burada görünecek.';
+                this.type = options.type || 'info';
+                this.buttonText = options.buttonText || 'Tamam';
+                this.onClose = options.onClose || null;
+                this.show = true;
+                
+                // Focus management
+                this.$nextTick(() => {
+                    const button = this.$el.querySelector('button[type="button"]');
+                    if (button) {
+                        button.focus();
+                    }
+                });
+            };
+        },
+        
+        close() {
+            if (this.onClose && typeof this.onClose === 'function') {
+                this.onClose();
+            }
+            this.show = false;
+        }
+    };
+}
+</script>
+
+    <!-- Command Palette Modal -->
+    <div id="cmdk" class="fixed inset-0 z-[10001] hidden">
+        <div class="absolute inset-0 bg-black/30" data-cmdk-close></div>
+        <div class="mx-auto mt-20 max-w-2xl rounded-xl shadow-strong overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-700 flex items-center">
+                <i class="fas fa-magnifying-glass text-gray-400 mr-2"></i>
+                <input id="cmdk-input" type="text" class="w-full bg-transparent outline-none text-sm text-gray-800 dark:text-gray-100" placeholder="Ara veya komut yazın... (Örn: yeni sözleşme, müşteri bul)" autocomplete="off">
+                <span class="ml-3 text-[10px] text-gray-500">Esc</span>
+            </div>
+            <div id="cmdk-results" class="max-h-80 overflow-y-auto">
+                <div class="p-4 text-sm text-gray-500 dark:text-gray-400">İpuçları: “yeni iş”, “müşteri: ali”, “sözleşme oluştur”</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Status bar metrics (lightweight)
+    (function(){
+        const $cache = document.getElementById('sb-cache');
+        const $db = document.getElementById('sb-db');
+        const $disk = document.getElementById('sb-disk');
+        const $queue = document.getElementById('sb-queue');
+        const $cacheFoot = document.getElementById('sb-cache-foot');
+        const $dbFoot = document.getElementById('sb-db-foot');
+        const $diskFoot = document.getElementById('sb-disk-foot');
+        const $queueFoot = document.getElementById('sb-queue-foot');
+        async function loadMetrics(){
+            try{
+                const res = await fetch('/app/performance/metrics', { headers: {'X-CSRF-Token': '6a0f2c3f953e1549727e6ef9c146a1456659de06f56dd3943cdb5fbae1313fb9'} });
+                if(!res.ok) return;
+                const data = await res.json();
+                const hit = Math.round((data.cache?.hit_ratio ?? data.cache?.cache_hit_ratio ?? 0.85) * 100);
+                const avg = data.queries?.slow_queries?.length ? Math.round((data.queries.slow_queries[0]?.duration_ms ?? 50)) : Math.round((50));
+                const diskPct = data.system?.disk_usage?.percentage ?? 0;
+                const cacheLabel = `Cache: ${hit}%`;
+                const dbLabel = `DB: ~${avg}ms`;
+                const diskLabel = `Disk: ${diskPct}%`;
+                const queueLabel = 'Queue: ok';
+                $cache && ($cache.textContent = cacheLabel);
+                $db && ($db.textContent = dbLabel);
+                $disk && ($disk.textContent = diskLabel);
+                $queue && ($queue.textContent = queueLabel);
+                $cacheFoot && ($cacheFoot.textContent = cacheLabel);
+                $dbFoot && ($dbFoot.textContent = dbLabel);
+                $diskFoot && ($diskFoot.textContent = diskLabel);
+                $queueFoot && ($queueFoot.textContent = queueLabel);
+            }catch(e){ /* silent */ }
+        }
+        loadMetrics();
+        setInterval(loadMetrics, 30000);
+
+        // Notification center (mock grouping; real data can be wired later)
+        const btn = document.getElementById('notif-button');
+        const menu = document.getElementById('notif-menu');
+        if(btn && menu){
+            btn.addEventListener('click', function(e){ e.stopPropagation(); menu.classList.toggle('hidden'); if(!menu.classList.contains('hidden')){ loadNotifs(); } });
+            document.addEventListener('click', function(){ menu.classList.add('hidden'); });
+            // Keep open when clicking inside
+            menu.addEventListener('click', function(e){ e.stopPropagation(); });
+            const listEl = document.getElementById('notif-list');
+            let isLoadingNotifs = false;
+            async function loadNotifs(showSpinner = true, preserveContent = true){
+                if(!listEl || isLoadingNotifs) return;
+                isLoadingNotifs = true;
+                const original = listEl.innerHTML;
+                
+                // SWR-like: preserve current content while loading (unless forced refresh)
+                if(showSpinner && preserveContent && listEl.children.length > 0) {
+                    listEl.setAttribute('data-loading', 'true');
+                }
+                
+                const url = '/app/api/notifications/list' + '?t=' + Date.now();
+                let lastError = null;
+                let res = null;
+                
+                // Retry logic: max 2 retries, 500ms backoff
+                for(let attempt = 0; attempt < 3; attempt++) {
+                    try {
+                        const controller = new AbortController();
+                        const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+                        
+                        res = await fetch(url, { 
+                            cache: 'no-store',
+                            signal: controller.signal
+                        });
+                        clearTimeout(timeoutId);
+                        
+                        if(res.ok) break;
+                        lastError = new Error('HTTP ' + res.status);
+                    } catch(e) {
+                        lastError = e;
+                        if(attempt < 2) {
+                            await new Promise(resolve => setTimeout(resolve, 500 * (attempt + 1)));
+                        }
+                    }
+                }
+                
+                listEl.removeAttribute('data-loading');
+                
+                if(!res || !res.ok) {
+                    if(!original || original.indexOf('data-key') === -1) {
+                        listEl.innerHTML = '<div class="p-4 text-sm text-gray-500 dark:text-gray-400">Yüklenemedi</div>';
+                    } else if(!preserveContent) {
+                        listEl.innerHTML = original;
+                    }
+                    isLoadingNotifs = false;
+                    return;
+                }
+                
+                try {
+                    const data = await res.json();
+                    const items = (data && data.data) ? data.data : [];
+                    
+                    if(items.length === 0) {
+                        if(!original || original.indexOf('data-key') === -1) {
+                            listEl.innerHTML = '<div class="p-4 text-sm text-gray-500 dark:text-gray-400">Yeni bildirim yok</div>';
+                        } else if(!preserveContent) {
+                            listEl.innerHTML = '<div class="p-4 text-sm text-gray-500 dark:text-gray-400">Yeni bildirim yok</div>';
+                        }
+                    } else {
+                        listEl.innerHTML = items.map(function(n){
+                            const color = n.type==='critical'?'text-red-500':(n.type==='system'?'text-blue-500':'text-yellow-500');
+                            const readCls = n.read ? 'opacity-60' : '';
+                            const key = n.key || '';
+                            const pill = n.read ? '' : '<span class="notif-pill">Yeni</span>';
+                            return '<div class="notif-item '+(n.type==='critical'?'notif-critical':(n.type==='system'?'notif-system':'notif-ops'))+' p-4 text-sm text-gray-700 dark:text-gray-200 flex items-start space-x-2 '+readCls+'" data-key="'+key+'">\
+                                <i class="fas '+(n.icon||'fa-bell')+' '+color+' mt-0.5"></i>\
+                                <div class="flex-1 min-w-0">\
+                                    <div class="text-sm font-medium text-gray-900 dark:text-white flex items-center gap-2" title="'+escapeHtml(n.text)+'">'+pill+'<span class="truncate">'+escapeHtml(n.text)+'</span></div>\
+                                    '+(n.meta?'<div class="text-xs text-gray-500 text-ellipsis" title="'+escapeHtml(n.meta)+'">'+escapeHtml(n.meta)+'</div>':'')+'\
+                                    <div class="mt-2 flex items-center justify-end gap-2">\
+                                        '+(n.href?'<a href="'+n.href+'" class="btn-chip btn-chip-primary nowrap">Aç</a>':'')+'\
+                                        '+(key?'<button class="btn-chip btn-chip-muted nowrap" data-action="mark" aria-label="Okundu işaretle">Okundu</button>':'')+'\
+                                    </div>\
+                                </div>\
+                            </div>';
+                        }).join('');
+                        // Event listeners are attached via delegation, no need to re-attach
+                    }
+                    
+                    // Update badge count
+                    const unreadCount = items.filter(item => !item.read).length;
+                    updateBadge(unreadCount);
+                } catch(e) {
+                    if(!preserveContent) {
+                        listEl.innerHTML = original || '<div class="p-4 text-sm text-gray-500 dark:text-gray-400">Yüklenemedi</div>';
+                    }
+                }
+                isLoadingNotifs = false;
+            }
+            function escapeHtml(s){ return (s||'').replace(/[&<>"']/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]); }); }
+            const markAll = document.getElementById('notif-mark-all');
+            markAll && markAll.addEventListener('click', async function(e){
+                e.preventDefault(); e.stopPropagation();
+                try{
+                    const res = await fetch('/app/api/notifications/mark-all', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json','X-CSRF-Token': '6a0f2c3f953e1549727e6ef9c146a1456659de06f56dd3943cdb5fbae1313fb9'},
+                    });
+                    if(res.ok){
+                        updateBadge(0);
+                        await loadNotifs(false, false);
+                    }
+                }catch(err){ /* silent */ }
+            });
+
+            const listElClickHandler = async function(e){
+                const markBtn = e.target.closest('[data-action="mark"]');
+                if(!markBtn){ return; }
+                e.preventDefault(); e.stopPropagation();
+                const parent = markBtn.closest('[data-key]');
+                if(!parent) { return; }
+                const notifKey = parent.getAttribute('data-key');
+                try{
+                    const res = await fetch('/app/api/notifications/mark', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json','X-CSRF-Token': '6a0f2c3f953e1549727e6ef9c146a1456659de06f56dd3943cdb5fbae1313fb9'},
+                        body: JSON.stringify({ key: notifKey })
+                    });
+                    if(res.ok){
+                        parent.classList.add('opacity-60');
+                        parent.querySelectorAll('.notif-pill').forEach(el => el.remove());
+                        const currentBadge = document.getElementById('notif-badge');
+                        if(currentBadge){
+                            const next = Math.max(0, parseInt(currentBadge.textContent.replace(/\D/g,''), 10) - 1);
+                            updateBadge(next);
+                        }
+                    }
+                }catch(err){ /* silent */ }
+            };
+            listEl && listEl.addEventListener('click', listElClickHandler);
+
+            async function updateBadge(count){
+                const badge = document.getElementById('notif-badge');
+                if(!badge){ return; }
+                if(count <= 0){
+                    badge.remove();
+                } else {
+                    badge.textContent = count > 9 ? '9+' : count;
+                }
+            }
+
+            // Prefetch notifications on hover for perceived performance
+            let hoverTimer = null;
+            btn.addEventListener('mouseenter', function(){
+                hoverTimer = setTimeout(() => {
+                    if(menu.classList.contains('hidden')){
+                        loadNotifs(false, true);
+                    }
+                }, 400);
+            });
+            btn.addEventListener('mouseleave', function(){
+                if(hoverTimer){ clearTimeout(hoverTimer); hoverTimer = null; }
+            });
+        }
+    })();
+    </script>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            const swUrl = "/app/service-worker.js";
+            const swScope = "/app/";
+            navigator.serviceWorker.register(swUrl, { scope: swScope })
+                .then((registration) => {
+                    console.log('SW registered: ', registration);
+                })
+                .catch((registrationError) => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+        });
+    }
+    </script>
+
+</body>
+</html>
+

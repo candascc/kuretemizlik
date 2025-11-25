@@ -1,0 +1,16 @@
+{
+    admin off
+}
+
+https://kuretemizlik.local:8443 {
+    root * ./public
+    encode gzip zstd
+    php_fastcgi 127.0.0.1:9000
+    file_server
+    tls ./local-https/certs/kuretemizlik.local.crt ./local-https/certs/kuretemizlik.local.key
+    log {
+        output file ./local-https/caddy.log
+        format console
+    }
+}
+

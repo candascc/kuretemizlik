@@ -1,0 +1,603 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - generic [ref=e7]: SLA 99.9%
+          - generic [ref=e8]: "Yedek: 25.11.2025 17:13"
+          - generic [ref=e9]: v1
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - generic [ref=e12]: 
+            - generic [ref=e13]: Temizlik Operasyonları
+          - generic [ref=e14]:
+            - generic [ref=e15]: 
+            - generic [ref=e16]: "Cache: —"
+          - generic [ref=e17]:
+            - generic [ref=e18]: 
+            - generic [ref=e19]: "DB: —"
+          - generic [ref=e20]:
+            - generic [ref=e21]: 
+            - generic [ref=e22]: "Disk: —"
+          - generic [ref=e23]:
+            - generic [ref=e24]: 
+            - generic [ref=e25]: "Queue: —"
+      - text:    
+      - generic [ref=e26]:
+        - link "Küre Temizlik" [ref=e28] [cursor=pointer]:
+          - /url: /app/
+          - img "Küre Temizlik Logosu" [ref=e32]
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - generic [ref=e35]: 
+            - searchbox "Hızlı arama" [ref=e36] [cursor=pointer]
+            - generic [ref=e37]: Ctrl + /
+          - generic [ref=e38]:
+            - generic [ref=e39]:
+              - link " Yeni İş" [ref=e40] [cursor=pointer]:
+                - /url: /app/jobs/new
+                - generic [ref=e41]: 
+                - generic [ref=e42]: Yeni İş
+              - link " Periyodik İş" [ref=e43] [cursor=pointer]:
+                - /url: /app/recurring/new
+                - generic [ref=e44]: 
+                - generic [ref=e45]: Periyodik İş
+              - link " Yeni Finans" [ref=e46] [cursor=pointer]:
+                - /url: /app/finance/new
+                - generic [ref=e47]: 
+                - generic [ref=e48]: Yeni Finans
+            - generic [ref=e49]:
+              - tab " Operasyon" [selected] [ref=e50] [cursor=pointer]:
+                - generic [ref=e51]: 
+                - generic [ref=e52]: Operasyon
+              - tab " Yönetim" [ref=e53] [cursor=pointer]:
+                - generic [ref=e54]: 
+                - generic [ref=e55]: Yönetim
+        - generic [ref=e57]:
+          - button "Karanlık mod" [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]: 
+          - button "Bildirimler" [ref=e61] [cursor=pointer]:
+            - generic [ref=e62]: 
+          - generic [ref=e63]:
+            - generic [ref=e64]:
+              - generic [ref=e65]: 
+              - generic [ref=e66]: candas
+            - link "Çıkış" [ref=e67] [cursor=pointer]:
+              - /url: /app/logout
+              - generic [ref=e68]: 
+              - generic [ref=e69]: Çıkış
+    - generic [ref=e71]:
+      - text: 
+      - generic [ref=e73]:
+        - link " Ana" [ref=e74] [cursor=pointer]:
+          - /url: /app/
+          - generic [ref=e75]: 
+          - text: Ana
+        - link " Takvim" [ref=e76] [cursor=pointer]:
+          - /url: /app/calendar
+          - generic [ref=e77]: 
+          - text: Takvim
+        - link " İşler" [ref=e78] [cursor=pointer]:
+          - /url: /app/jobs
+          - generic [ref=e79]: 
+          - text: İşler
+        - link " Müşteriler" [ref=e80] [cursor=pointer]:
+          - /url: /app/customers
+          - generic [ref=e81]: 
+          - text: Müşteriler
+        - generic [ref=e82]:
+          - button " Yönetim " [ref=e83] [cursor=pointer]:
+            - generic [ref=e84]: 
+            - text: Yönetim
+            - generic [ref=e85]: 
+          - text:    
+        - generic [ref=e86]:
+          - button " Operasyon " [ref=e87] [cursor=pointer]:
+            - generic [ref=e88]: 
+            - text: Operasyon
+            - generic [ref=e89]: 
+          - text:  
+        - link "Analitik" [ref=e90] [cursor=pointer]:
+          - /url: /app/analytics
+          - text: Analitik
+        - generic [ref=e91]:
+          - button " Raporlar " [ref=e92] [cursor=pointer]:
+            - generic [ref=e93]: 
+            - text: Raporlar
+            - generic [ref=e94]: 
+          - text:      
+        - generic [ref=e95]:
+          - button " Ayarlar " [ref=e96] [cursor=pointer]:
+            - generic [ref=e97]: 
+            - text: Ayarlar
+            - generic [ref=e98]: 
+          - text:         
+    - text:                                 
+  - link "Ana içeriğe atla" [ref=e99] [cursor=pointer]:
+    - /url: "#main-content"
+  - main [ref=e100]:
+    - generic [ref=e103]:
+      - generic [ref=e106]:
+        - generic [ref=e108]: 
+        - paragraph [ref=e110]: ✅ İşlem başarılı.
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - heading " Ana Sayfa" [level=1] [ref=e115]:
+              - generic [ref=e116]: 
+              - text: Ana Sayfa
+            - paragraph [ref=e117]: Genel bakış ve önemli bilgiler
+          - button " Yenile" [ref=e119] [cursor=pointer]:
+            - generic [ref=e120]: 
+            - generic [ref=e121]: Yenile
+        - generic [ref=e122]:
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - generic [ref=e127]:
+                - paragraph [ref=e128]: Aktif Periyodik İşler
+                - paragraph [ref=e129]: "1"
+                - paragraph [ref=e130]:
+                  - generic [ref=e131]: 
+                  - generic [ref=e132]: 0 iş bu ay
+              - generic [ref=e134]: 
+            - link "Yönet →" [ref=e136] [cursor=pointer]:
+              - /url: /app/recurring
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - generic [ref=e141]:
+                - paragraph [ref=e142]: Bugünkü İşler
+                - paragraph [ref=e143]: "10"
+                - paragraph [ref=e144]:
+                  - generic [ref=e145]: 
+                  - generic [ref=e146]: 25.11.2025
+              - generic [ref=e148]: 
+            - link "Tümünü Gör →" [ref=e150] [cursor=pointer]:
+              - /url: /app/jobs?filter=today
+          - generic [ref=e153]:
+            - generic [ref=e154]:
+              - generic [ref=e155]:
+                - paragraph [ref=e156]: Aktif Müşteriler
+                - paragraph [ref=e157]: "30844"
+                - paragraph [ref=e158]:
+                  - generic [ref=e159]: 
+                  - generic [ref=e160]: Bu ay
+              - generic [ref=e162]: 
+            - link "Tümünü Gör →" [ref=e164] [cursor=pointer]:
+              - /url: /app/customers
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - generic [ref=e169]:
+                - paragraph [ref=e170]: Bu Hafta Gelir
+                - paragraph [ref=e171]: ₺7.200
+                - paragraph [ref=e172]:
+                  - generic [ref=e173]: 
+                  - generic [ref=e174]: Haftalık
+              - generic [ref=e176]: 
+            - link "Detaylar →" [ref=e178] [cursor=pointer]:
+              - /url: /app/finance
+        - generic [ref=e179]:
+          - generic [ref=e180]:
+            - generic [ref=e181]:
+              - heading " Haftalık Gelir Trendi" [level=2] [ref=e182]:
+                - generic [ref=e183]: 
+                - text: Haftalık Gelir Trendi
+              - paragraph [ref=e184]: Son 7 günün gelir analizi
+            - generic [ref=e187]:
+              - generic [ref=e188]:
+                - generic [ref=e189]:
+                  - 'generic "Çar: ₺0"'
+                - generic [ref=e190]: Çar
+                - generic [ref=e191]: ₺0
+              - generic [ref=e192]:
+                - generic [ref=e193]:
+                  - 'generic "Per: ₺0"'
+                - generic [ref=e194]: Per
+                - generic [ref=e195]: ₺0
+              - generic [ref=e196]:
+                - generic [ref=e197]:
+                  - 'generic "Cum: ₺0"'
+                - generic [ref=e198]: Cum
+                - generic [ref=e199]: ₺0
+              - generic [ref=e200]:
+                - generic [ref=e201]:
+                  - 'generic "Cmt: ₺0"'
+                - generic [ref=e202]: Cmt
+                - generic [ref=e203]: ₺0
+              - generic [ref=e204]:
+                - generic [ref=e205]:
+                  - 'generic "Paz: ₺0"'
+                - generic [ref=e206]: Paz
+                - generic [ref=e207]: ₺0
+              - generic [ref=e208]:
+                - generic [ref=e209]:
+                  - 'generic "Pzt: ₺0"'
+                - generic [ref=e210]: Pzt
+                - generic [ref=e211]: ₺0
+              - generic [ref=e212]:
+                - 'generic "Sal: ₺7.200" [ref=e214] [cursor=pointer]'
+                - generic [ref=e215]: Sal
+                - generic [ref=e216]: ₺7.200
+          - generic [ref=e217]:
+            - generic [ref=e218]:
+              - heading " Yaklaşan Randevular" [level=2] [ref=e219]:
+                - generic [ref=e220]: 
+                - text: Yaklaşan Randevular
+              - paragraph [ref=e221]: Önümüzdeki 3 gün
+            - generic [ref=e223]:
+              - generic [ref=e224]: 
+              - paragraph [ref=e225]: Yaklaşan randevu bulunmuyor
+              - link "+ Yeni Randevu" [ref=e226] [cursor=pointer]:
+                - /url: /app/ointments/new
+                - generic [ref=e227]: +
+                - text: Yeni Randevu
+        - generic [ref=e229]:
+          - generic [ref=e230]:
+            - heading " Bugünkü İşler" [level=2] [ref=e231]:
+              - generic [ref=e232]: 
+              - text: Bugünkü İşler
+            - paragraph [ref=e233]: 25.11.2025 tarihli işleriniz
+          - generic [ref=e234]:
+            - generic [ref=e235]:
+              - generic [ref=e236]:
+                - generic [ref=e237]:
+                  - heading "Test sentence with words." [level=3] [ref=e238]
+                  - paragraph [ref=e239]: Test Name 6924e5bca819e
+                  - paragraph [ref=e240]:
+                    - generic [ref=e241]: 
+                    - text: 02:09
+                - generic [ref=e242]:
+                  - generic [ref=e243]: Planlandı
+                  - link "" [ref=e244] [cursor=pointer]:
+                    - /url: /app/jobs/show/157
+                    - generic [ref=e245]: 
+              - generic [ref=e246]:
+                - generic [ref=e247]:
+                  - heading "Test sentence with words." [level=3] [ref=e248]
+                  - paragraph [ref=e249]: Test Name 6924e5bcc12bd
+                  - paragraph [ref=e250]:
+                    - generic [ref=e251]: 
+                    - text: 02:09
+                - generic [ref=e252]:
+                  - generic [ref=e253]: Planlandı
+                  - link "" [ref=e254] [cursor=pointer]:
+                    - /url: /app/jobs/show/158
+                    - generic [ref=e255]: 
+              - generic [ref=e256]:
+                - generic [ref=e257]:
+                  - heading "Test sentence with words." [level=3] [ref=e258]
+                  - paragraph [ref=e259]: Test Name 6924e5bcb20a5
+                  - paragraph [ref=e260]:
+                    - generic [ref=e261]: 
+                    - text: 02:09
+                - generic [ref=e262]:
+                  - generic [ref=e263]: Planlandı
+                  - link "" [ref=e264] [cursor=pointer]:
+                    - /url: /app/jobs/show/159
+                    - generic [ref=e265]: 
+              - generic [ref=e266]:
+                - generic [ref=e267]:
+                  - heading "Test sentence with words." [level=3] [ref=e268]
+                  - paragraph [ref=e269]: Test Name 6924e5bcba2a1
+                  - paragraph [ref=e270]:
+                    - generic [ref=e271]: 
+                    - text: 02:09
+                - generic [ref=e272]:
+                  - generic [ref=e273]: Planlandı
+                  - link "" [ref=e274] [cursor=pointer]:
+                    - /url: /app/jobs/show/160
+                    - generic [ref=e275]: 
+              - generic [ref=e276]:
+                - generic [ref=e277]:
+                  - heading "Test sentence with words." [level=3] [ref=e278]
+                  - paragraph [ref=e279]: Test Name 6924e5bcb8d82
+                  - paragraph [ref=e280]:
+                    - generic [ref=e281]: 
+                    - text: 02:09
+                - generic [ref=e282]:
+                  - generic [ref=e283]: Planlandı
+                  - link "" [ref=e284] [cursor=pointer]:
+                    - /url: /app/jobs/show/161
+                    - generic [ref=e285]: 
+              - generic [ref=e286]:
+                - generic [ref=e287]:
+                  - heading "Test sentence with words." [level=3] [ref=e288]
+                  - paragraph [ref=e289]: Test Name 6924e5bcb996c
+                  - paragraph [ref=e290]:
+                    - generic [ref=e291]: 
+                    - text: 02:09
+                - generic [ref=e292]:
+                  - generic [ref=e293]: Planlandı
+                  - link "" [ref=e294] [cursor=pointer]:
+                    - /url: /app/jobs/show/162
+                    - generic [ref=e295]: 
+              - generic [ref=e296]:
+                - generic [ref=e297]:
+                  - heading "Test sentence with words." [level=3] [ref=e298]
+                  - paragraph [ref=e299]: Test Name 6924e5bca8f36
+                  - paragraph [ref=e300]:
+                    - generic [ref=e301]: 
+                    - text: 02:09
+                - generic [ref=e302]:
+                  - generic [ref=e303]: Planlandı
+                  - link "" [ref=e304] [cursor=pointer]:
+                    - /url: /app/jobs/show/163
+                    - generic [ref=e305]: 
+              - generic [ref=e306]:
+                - generic [ref=e307]:
+                  - heading "Test sentence with words." [level=3] [ref=e308]
+                  - paragraph [ref=e309]: Test Name 6924e5bcb8fa8
+                  - paragraph [ref=e310]:
+                    - generic [ref=e311]: 
+                    - text: 02:09
+                - generic [ref=e312]:
+                  - generic [ref=e313]: Planlandı
+                  - link "" [ref=e314] [cursor=pointer]:
+                    - /url: /app/jobs/show/164
+                    - generic [ref=e315]: 
+              - generic [ref=e316]:
+                - generic [ref=e317]:
+                  - heading "Test sentence with words." [level=3] [ref=e318]
+                  - paragraph [ref=e319]: Test Name 6924e5bcb0f4b
+                  - paragraph [ref=e320]:
+                    - generic [ref=e321]: 
+                    - text: 02:09
+                - generic [ref=e322]:
+                  - generic [ref=e323]: Planlandı
+                  - link "" [ref=e324] [cursor=pointer]:
+                    - /url: /app/jobs/show/165
+                    - generic [ref=e325]: 
+              - generic [ref=e326]:
+                - generic [ref=e327]:
+                  - heading "Test sentence with words." [level=3] [ref=e328]
+                  - paragraph [ref=e329]: Test Name 6924e5bcaa3a6
+                  - paragraph [ref=e330]:
+                    - generic [ref=e331]: 
+                    - text: 02:09
+                - generic [ref=e332]:
+                  - generic [ref=e333]: Planlandı
+                  - link "" [ref=e334] [cursor=pointer]:
+                    - /url: /app/jobs/show/166
+                    - generic [ref=e335]: 
+            - link "Tüm Bugünkü İşleri Gör " [ref=e337] [cursor=pointer]:
+              - /url: /app/jobs?filter=today
+              - text: Tüm Bugünkü İşleri Gör
+              - generic [ref=e338]: 
+        - generic [ref=e339]:
+          - generic [ref=e340]:
+            - generic [ref=e341]:
+              - heading " Son Aktiviteler" [level=2] [ref=e342]:
+                - generic [ref=e343]: 
+                - text: Son Aktiviteler
+              - paragraph [ref=e344]: Sistemdeki son değişiklikler
+            - generic [ref=e346]:
+              - generic [ref=e347]:
+                - generic [ref=e349]: 
+                - generic [ref=e350]:
+                  - paragraph [ref=e351]: "Yeni iş eklendi: İş Adı Yok"
+                  - paragraph [ref=e352]: merve • 2 saat önce
+              - generic [ref=e353]:
+                - generic [ref=e355]: 
+                - generic [ref=e356]:
+                  - paragraph [ref=e357]: "Yeni iş eklendi: Test sentence with words."
+                  - paragraph [ref=e358]: Test Name 69255a3b8f96d • 3 saat önce
+              - generic [ref=e359]:
+                - generic [ref=e361]: 
+                - generic [ref=e362]:
+                  - paragraph [ref=e363]: "Yeni iş eklendi: Test sentence with words."
+                  - paragraph [ref=e364]: Test Name 69255a3b8f7fe • 3 saat önce
+              - generic [ref=e365]:
+                - generic [ref=e367]: 
+                - generic [ref=e368]:
+                  - paragraph [ref=e369]: "Yeni iş eklendi: Test sentence with words."
+                  - paragraph [ref=e370]: Test Name 69255a3b8f673 • 3 saat önce
+              - generic [ref=e371]:
+                - generic [ref=e373]: 
+                - generic [ref=e374]:
+                  - paragraph [ref=e375]: "Yeni iş eklendi: Test sentence with words."
+                  - paragraph [ref=e376]: Test Name 69255a3b8f4d9 • 3 saat önce
+              - generic [ref=e377]:
+                - generic [ref=e379]: 
+                - generic [ref=e380]:
+                  - paragraph [ref=e381]: "İş tamamlandı: Test sentence with words."
+                  - paragraph [ref=e382]: Test Name 6925595bdd54b • 3 saat önce
+              - generic [ref=e383]:
+                - generic [ref=e385]: 
+                - generic [ref=e386]:
+                  - paragraph [ref=e387]: "İş tamamlandı: Test sentence with words."
+                  - paragraph [ref=e388]: Test Name 6925595bdd54b • 3 saat önce
+              - generic [ref=e389]:
+                - generic [ref=e391]: 
+                - generic [ref=e392]:
+                  - paragraph [ref=e393]: "İş tamamlandı: Test sentence with words."
+                  - paragraph [ref=e394]: Test Name 6925595bdd54b • 3 saat önce
+              - generic [ref=e395]:
+                - generic [ref=e397]: 
+                - generic [ref=e398]:
+                  - paragraph [ref=e399]: "İş tamamlandı: Test sentence with words."
+                  - paragraph [ref=e400]: Test Name 6925595bdd54b • 3 saat önce
+              - generic [ref=e401]:
+                - generic [ref=e403]: 
+                - generic [ref=e404]:
+                  - paragraph [ref=e405]: "İş tamamlandı: Test sentence with words."
+                  - paragraph [ref=e406]: Test Name 6925595bdd54b • 3 saat önce
+          - generic [ref=e407]:
+            - generic [ref=e408]:
+              - heading " Sistem Durumu" [level=2] [ref=e409]:
+                - generic [ref=e410]: 
+                - text: Sistem Durumu
+              - paragraph [ref=e411]: Sistem performansı ve durumu
+            - generic [ref=e413]:
+              - generic [ref=e414]:
+                - generic [ref=e415]: Veritabanı
+                - generic [ref=e418]: Çevrimiçi
+              - generic [ref=e419]:
+                - generic [ref=e420]: API Durumu
+                - generic [ref=e423]: Aktif
+              - generic [ref=e424]:
+                - generic [ref=e425]: Cache
+                - generic [ref=e428]: Yükleniyor
+              - generic [ref=e429]:
+                - generic [ref=e430]: Son Yedekleme
+                - generic [ref=e431]: 25.11.2025 17:13
+  - contentinfo [ref=e432]:
+    - generic [ref=e433]:
+      - generic [ref=e434]:
+        - generic [ref=e435]:
+          - generic [ref=e436]:
+            - generic [ref=e438]: 
+            - generic [ref=e439]:
+              - paragraph [ref=e440]: Küre Temizlik Platformu
+              - heading "Operasyonlarınızı tek panelden yönetin" [level=3] [ref=e441]
+              - paragraph [ref=e442]: Operasyon ve yönetim modüllerinde tam yönetim ve onay yetkisi.
+          - paragraph [ref=e443]: Randevular, saha ekipleri, finans ve raporlamayı tek çalışma alanında toplayan modern iş takip sistemi. Gerçek zamanlı metrikler ve otomasyonlarla performansınız her an görünür.
+          - generic [ref=e444]:
+            - generic [ref=e445]: "Rol: Operasyon Yöneticisi"
+            - generic [ref=e446]: "Filtre: Tümü"
+            - generic [ref=e447]: "Ortam: production"
+            - generic [ref=e448]: "Sürüm:"
+        - generic [ref=e449]:
+          - generic [ref=e450]:
+            - paragraph [ref=e451]: Hızlı aksiyon
+            - heading "Yeni görevleri dakikalar içinde planlayın" [level=4] [ref=e452]
+            - paragraph [ref=e453]: Yoğun dönemlerde bile ekipleri aynı sayfada tutun. Merkezi takvim, iş talimatı ve onay akışlarını tek tıklamayla başlatın.
+          - generic [ref=e454]:
+            - link "Yeni İş Oluştur" [ref=e455] [cursor=pointer]:
+              - /url: /app/jobs/new
+              - generic [ref=e456]: +
+              - text: Yeni İş Oluştur
+            - link "Destek Talebi" [ref=e457] [cursor=pointer]:
+              - /url: mailto:destek@kuretemizlik.com
+              - generic [ref=e458]: 
+              - text: Destek Talebi
+          - paragraph [ref=e459]: Talep formunuz SLA kapsamına göre ilgili ekip liderine otomatik olarak yönlendirilir.
+      - generic [ref=e460]:
+        - generic [ref=e461]:
+          - paragraph [ref=e462]: Operasyon Modülleri
+          - list [ref=e463]:
+            - listitem [ref=e464]:
+              - link "Ana Dashboard" [ref=e465] [cursor=pointer]:
+                - /url: /app/
+                - generic [ref=e466]: 
+                - text: Ana Dashboard
+            - listitem [ref=e467]:
+              - link "Takvim" [ref=e468] [cursor=pointer]:
+                - /url: /app/calendar
+                - generic [ref=e469]: 
+                - text: Takvim
+            - listitem [ref=e470]:
+              - link "İşler" [ref=e471] [cursor=pointer]:
+                - /url: /app/jobs
+                - generic [ref=e472]: 
+                - text: İşler
+            - listitem [ref=e473]:
+              - link "Müşteriler" [ref=e474] [cursor=pointer]:
+                - /url: /app/customers
+                - generic [ref=e475]: 
+                - text: Müşteriler
+            - listitem [ref=e476]:
+              - link "Finans" [ref=e477] [cursor=pointer]:
+                - /url: /app/finance
+                - generic [ref=e478]: 
+                - text: Finans
+            - listitem [ref=e479]:
+              - link "Raporlama" [ref=e480] [cursor=pointer]:
+                - /url: /app/reports/financial
+                - generic [ref=e481]: 
+                - text: Raporlama
+            - listitem [ref=e482]:
+              - link "Ayarlar" [ref=e483] [cursor=pointer]:
+                - /url: /app/settings
+                - generic [ref=e484]: 
+                - text: Ayarlar
+        - generic [ref=e485]:
+          - paragraph [ref=e486]: Kaynaklar
+          - list [ref=e487]:
+            - listitem [ref=e488]:
+              - link "Manuel Test Listesi" [ref=e489] [cursor=pointer]:
+                - /url: /app/MANUAL_TEST_CHECKLIST.md
+                - generic [ref=e490]: 
+                - text: Manuel Test Listesi
+            - listitem [ref=e491]:
+              - link "UX Kılavuzu" [ref=e492] [cursor=pointer]:
+                - /url: /app/UX_IMPLEMENTATION_GUIDE.md
+                - generic [ref=e493]: 
+                - text: UX Kılavuzu
+            - listitem [ref=e494]:
+              - link "Deploy Checklist" [ref=e495] [cursor=pointer]:
+                - /url: /app/DEPLOYMENT_CHECKLIST.md
+                - generic [ref=e496]: 
+                - text: Deploy Checklist
+        - generic [ref=e497]:
+          - paragraph [ref=e498]: Destek & İletişim
+          - list [ref=e499]:
+            - listitem [ref=e500]:
+              - generic [ref=e501]: 
+              - generic [ref=e502]:
+                - generic [ref=e503]: E-posta
+                - link "destek@kuretemizlik.com" [ref=e504] [cursor=pointer]:
+                  - /url: mailto:destek@kuretemizlik.com
+            - listitem [ref=e505]:
+              - generic [ref=e506]: 
+              - generic [ref=e507]:
+                - generic [ref=e508]: Çağrı Merkezi
+                - link "+90 850 000 0000" [ref=e509] [cursor=pointer]:
+                  - /url: tel:+908500000000
+            - listitem [ref=e510]:
+              - generic [ref=e511]: 
+              - generic [ref=e512]:
+                - generic [ref=e513]: Destek Saatleri
+                - text: Hafta içi 09:00 – 18:00
+            - listitem [ref=e514]:
+              - generic [ref=e515]: 
+              - generic [ref=e516]:
+                - generic [ref=e517]: Ofis
+                - text: İstanbul / Maslak Teknoloji Ofisi
+        - generic [ref=e518]:
+          - paragraph [ref=e519]: Sistem Özeti
+          - list [ref=e520]:
+            - listitem [ref=e521]:
+              - generic [ref=e522]: Aktif Rol
+              - generic [ref=e523]: Operasyon Yöneticisi
+            - listitem [ref=e524]:
+              - generic [ref=e525]: Kapsam
+              - generic [ref=e526]: Yönetim Paneli
+            - listitem [ref=e527]:
+              - generic [ref=e528]: Sunucu Saati
+              - generic [ref=e529]: 25.11.2025 17:13
+            - listitem [ref=e530]:
+              - generic [ref=e531]: Zaman Dilimi
+              - generic [ref=e532]: Europe/Istanbul
+            - listitem [ref=e533]:
+              - generic [ref=e534]: Çoklu Şirket Filtre
+              - generic [ref=e535]: Tümü
+            - listitem [ref=e536]:
+              - generic [ref=e537]: Aktif Kullanıcı
+              - generic [ref=e538]: candas
+            - listitem [ref=e539]:
+              - generic [ref=e540]: Performans Hedefi
+              - generic [ref=e541]: < 200 ms
+      - generic [ref=e542]:
+        - generic [ref=e543]:
+          - generic [ref=e544]:
+            - paragraph [ref=e545]: © 2025 Küre Temizlik. Tüm hakları saklıdır.
+            - paragraph [ref=e546]: Operasyonel mükemmelik programı kapsamında düzenli güvenlik taramaları ve yük testleri uygulanır.
+          - generic [ref=e547]:
+            - link "Gizlilik Politikası" [ref=e548] [cursor=pointer]:
+              - /url: /app/privacy-policy
+            - generic [ref=e549]: •
+            - link "Kullanım Şartları" [ref=e550] [cursor=pointer]:
+              - /url: /app/terms-of-use
+            - generic [ref=e551]: •
+            - link "Sistem Durumu" [ref=e552] [cursor=pointer]:
+              - /url: /app/status
+        - generic [ref=e553]:
+          - generic [ref=e554]: "Cache: ölçülüyor..."
+          - generic [ref=e555]: "DB: ölçülüyor..."
+          - generic [ref=e556]: "Disk: ölçülüyor..."
+          - generic [ref=e557]: "Queue: ölçülüyor..."
+  - text: +   +      
+  - text:     
+```

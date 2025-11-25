@@ -1,0 +1,45 @@
+﻿{
+    "profile": "new",
+    "db": "C:\\X\\Yaz─▒l─▒m\\Alastyr_ftp\\kuretemizlik.com\\app\\db\\app.sqlite",
+    "generated_at": "2025-11-14T21:16:34+01:00",
+    "scalar": {
+        "users": 11,
+        "customers": 2,
+        "addresses": 0,
+        "services": 5,
+        "jobs": 0,
+        "job_payments": 0,
+        "money_entries": 1,
+        "appointments": 0,
+        "payments_table_exists": 1,
+        "buildings": 13,
+        "units": 14,
+        "management_fees": 3,
+        "resident_users": 12,
+        "staff": 1,
+        "jobs_missing_updated": 0,
+        "addresses_missing_updated": null,
+        "money_entries_missing_created_by": 0
+    },
+    "pairs": {
+        "jobs_status_distribution": [],
+        "appointments_status_distribution": [],
+        "management_fee_status_distribution": [
+            {
+                "label": "paid",
+                "value": 1
+            },
+            {
+                "label": "partial",
+                "value": 1
+            },
+            {
+                "label": "pending",
+                "value": 1
+            }
+        ]
+    },
+    "warnings": {
+        "addresses_missing_updated": "SQLSTATE[HY000]: General error: 1 no such column: updated_at"
+    }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "service-worker.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:ui": "playwright test",
+    "test:ui:headed": "playwright test --headed",
+    "test:ui:mobile": "playwright test --project=mobile-chromium",
+    "test:ui:desktop": "playwright test --project=desktop-chromium",
+    "test:ui:report": "playwright show-report tests/ui/reports",
+    "test:ui:visual": "playwright test visual-regression.spec.ts",
+    "test:ui:a11y": "playwright test accessibility.spec.ts",
+    "test:ui:update-snapshots": "playwright test --update-snapshots",
+    "test:ui:e2e": "playwright test e2e-flows.spec.ts e2e-finance.spec.ts e2e-multitenant.spec.ts e2e-security.spec.ts",
+    "test:ui:e2e:flows": "playwright test e2e-flows.spec.ts",
+    "test:ui:e2e:finance": "playwright test e2e-finance.spec.ts",
+    "test:ui:e2e:multitenant": "playwright test e2e-multitenant.spec.ts",
+    "test:perf": "playwright test performance.spec.ts",
+    "test:perf:lighthouse:local": "lhci autorun --config=lighthouserc.json",
+    "test:perf:lighthouse:ci": "lhci autorun --config=lighthouserc.json --upload.target=filesystem",
+    "test:ui:cross": "playwright test --project=desktop-chromium --project=desktop-firefox --project=desktop-webkit",
+    "test:ui:smoke:cross": "playwright test auth.spec.ts dashboard.spec.ts --project=desktop-chromium --project=desktop-firefox --project=desktop-webkit",
+    "test:ui:gating:local": "playwright test --project=desktop-chromium --project=mobile-chromium tests/ui/auth.spec.ts tests/ui/e2e-flows.spec.ts tests/ui/e2e-finance.spec.ts tests/ui/e2e-multitenant.spec.ts tests/ui/e2e-security.spec.ts",
+    "test:prod:smoke": "playwright test tests/ui/prod-smoke.spec.ts",
+          "check:prod:browser": "ts-node scripts/check-prod-browser.ts",
+          "check:prod:browser:full": "ts-node scripts/check-prod-browser-full.ts",
+          "check:prod:browser:crawl": "ts-node scripts/check-prod-browser-crawl.ts",
+          "check:prod:browser:crawl:roles": "ts-node scripts/check-prod-browser-crawl-roles.ts",
+    "build:css:tailwind": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/cli": "^7.4.4",
+    "@capacitor/core": "^7.4.4"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.8.0",
+    "@lhci/cli": "^0.12.0",
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0",
+    "lighthouse": "^11.0.0",
+    "tailwindcss": "^3.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.0"
+  }
+}

@@ -1,0 +1,36 @@
+PHPUnit 9.6.29 by Sebastian Bergmann and contributors.
+
+F                                                                   1 / 1 (100%)=== Resident Profile Tests ===
+
+Test: Contact form normalizes phone & toggles notifications
+-----------------------------------------------------------------
+❌ ERROR: Redirect to /app/resident/profile
+
+Test: Secondary phone cannot match primary
+-----------------------------------------------------------------
+❌ ERROR: Redirect to /app/resident/profile
+
+Test: Password update enforces validation rules
+-------------------------------------------------
+❌ ERROR: Redirect to /app/resident/profile
+
+-----------------------------------------------------------------
+[FAIL] CONTACT UPDATE: Redirect to /app/resident/profile
+[FAIL] SECONDARY PHONE VALIDATION: Redirect to /app/resident/profile
+[FAIL] PASSWORD UPDATE: Redirect to /app/resident/profile
+-----------------------------------------------------------------
+
+
+
+Time: 00:00.316, Memory: 8,00 MB
+
+There was 1 failure:
+
+1) ResidentProfileTestWrapper::testAllResidentProfileTests
+All resident profile tests should pass
+Failed asserting that false is true.
+
+C:\X\Yazılım\Alastyr_ftp\kuretemizlik.com\app\tests\functional\ResidentProfileTestWrapper.php:47
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1.

@@ -1,0 +1,18 @@
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Test artifacts
+screenshots/
+videos/
+traces/
+
+# Results
+results.json
+
+# Visual regression snapshots (keep baseline, ignore diff)
+*-diff.png
+*-actual.png
+*-expected.png

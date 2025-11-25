@@ -1,0 +1,35 @@
+{
+    "timestamp": "2025-11-21 00:07:45",
+    "duration": 1.52,
+    "suites": [
+        {
+            "name": "Payment",
+            "passed": true
+        },
+        {
+            "name": "Auth",
+            "passed": true
+        },
+        {
+            "name": "Header_security",
+            "passed": true
+        },
+        {
+            "name": "Management_residents",
+            "passed": true
+        },
+        {
+            "name": "Job_customer_finance",
+            "passed": true
+        },
+        {
+            "name": "Resident_payment",
+            "passed": false
+        },
+        {
+            "name": "Resident_profile",
+            "passed": false
+        }
+    ],
+    "overall_success": false
+}

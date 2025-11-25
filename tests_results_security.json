@@ -1,0 +1,20 @@
+{
+    "timestamp": "2025-11-20 20:44:59",
+    "tests": [
+        {
+            "file": "CsrfProtectionTest.php",
+            "status": "available"
+        },
+        {
+            "file": "XssPreventionTest.php",
+            "status": "available"
+        },
+        {
+            "file": "SqlInjectionTest.php",
+            "status": "available"
+        }
+    ],
+    "passed": 0,
+    "failed": 0,
+    "total": 3
+}

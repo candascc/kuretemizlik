@@ -1,0 +1,434 @@
+{
+    "tests\/unit\/SessionHelperTest.php": {
+        "status": "PASS",
+        "tests": 6,
+        "assertions": 15,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_SessionHelperTest.php.txt"
+    },
+    "tests\/unit\/ArrayAccessSafetyTest.php": {
+        "status": "PASS",
+        "tests": 6,
+        "assertions": 16,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ArrayAccessSafetyTest.php.txt"
+    },
+    "tests\/unit\/ErrorHandlingTest.php": {
+        "status": "PASS",
+        "tests": 3,
+        "assertions": 4,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ErrorHandlingTest.php.txt"
+    },
+    "tests\/unit\/ExceptionHandlerTest.php": {
+        "status": "PASS",
+        "tests": 3,
+        "assertions": 4,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ExceptionHandlerTest.php.txt"
+    },
+    "tests\/unit\/ViewExtractSafetyTest.php": {
+        "status": "PASS",
+        "tests": 4,
+        "assertions": 8,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ViewExtractSafetyTest.php.txt"
+    },
+    "tests\/unit\/RecurringOccurrenceMigrationTest.php": {
+        "status": "PASS",
+        "tests": 3,
+        "assertions": 4,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_RecurringOccurrenceMigrationTest.php.txt"
+    },
+    "tests\/integration\/SessionManagementTest.php": {
+        "status": "PASS",
+        "tests": 5,
+        "assertions": 10,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_integration_SessionManagementTest.php.txt"
+    },
+    "tests\/integration\/RecurringJobGenerationTest.php": {
+        "status": "PASS",
+        "tests": 2,
+        "assertions": 2,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_integration_RecurringJobGenerationTest.php.txt"
+    },
+    "tests\/integration\/SessionCookiePathTest.php": {
+        "status": "PASS",
+        "tests": 3,
+        "assertions": 3,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_integration_SessionCookiePathTest.php.txt"
+    },
+    "tests\/unit\/ValidatorSecurityTest.php": {
+        "status": "PASS",
+        "tests": 9,
+        "assertions": 28,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ValidatorSecurityTest.php.txt"
+    },
+    "tests\/unit\/XssPreventionTest.php": {
+        "status": "PASS",
+        "tests": 7,
+        "assertions": 36,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_XssPreventionTest.php.txt"
+    },
+    "tests\/unit\/TransactionRollbackTest.php": {
+        "status": "PASS",
+        "tests": 6,
+        "assertions": 11,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_TransactionRollbackTest.php.txt"
+    },
+    "tests\/unit\/RateLimitingTest.php": {
+        "status": "PASS",
+        "tests": 5,
+        "assertions": 19,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_RateLimitingTest.php.txt"
+    },
+    "tests\/unit\/FileUploadValidationTest.php": {
+        "status": "PASS",
+        "tests": 7,
+        "assertions": 20,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_FileUploadValidationTest.php.txt"
+    },
+    "tests\/unit\/CsrfMiddlewareTest.php": {
+        "status": "PASS",
+        "tests": 7,
+        "assertions": 26,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_CsrfMiddlewareTest.php.txt"
+    },
+    "tests\/unit\/PasswordResetSecurityTest.php": {
+        "status": "PASS",
+        "tests": 6,
+        "assertions": 15,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_PasswordResetSecurityTest.php.txt"
+    },
+    "tests\/unit\/ControllerTraitTest.php": {
+        "status": "PASS",
+        "tests": 36,
+        "assertions": 81,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ControllerTraitTest.php.txt"
+    },
+    "tests\/unit\/AppConstantsTest.php": {
+        "status": "PASS",
+        "tests": 11,
+        "assertions": 83,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_AppConstantsTest.php.txt"
+    },
+    "tests\/unit\/ErrorDetectorTest.php": {
+        "status": "PASS",
+        "tests": 4,
+        "assertions": 5,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ErrorDetectorTest.php.txt"
+    },
+    "tests\/unit\/CrawlConfigTest.php": {
+        "status": "PASS",
+        "tests": 3,
+        "assertions": 6,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_CrawlConfigTest.php.txt"
+    },
+    "tests\/unit\/SessionManagerTest.php": {
+        "status": "PASS",
+        "tests": 2,
+        "assertions": 6,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_SessionManagerTest.php.txt"
+    },
+    "tests\/unit\/ResidentLoginControllerTest.php": {
+        "status": "PASS",
+        "tests": 2,
+        "assertions": 10,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ResidentLoginControllerTest.php.txt"
+    },
+    "tests\/unit\/PortalLoginControllerTest.php": {
+        "status": "PASS",
+        "tests": 2,
+        "assertions": 10,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_PortalLoginControllerTest.php.txt"
+    },
+    "tests\/unit\/InputSanitizerTest.php": {
+        "status": "PASS",
+        "tests": 12,
+        "assertions": 14,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_InputSanitizerTest.php.txt"
+    },
+    "tests\/unit\/ControllerHelperTest.php": {
+        "status": "PASS",
+        "tests": 12,
+        "assertions": 29,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ControllerHelperTest.php.txt"
+    },
+    "tests\/unit\/ContractTemplateSelectionTest.php": {
+        "status": "NO_TESTS",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ContractTemplateSelectionTest.php.txt"
+    },
+    "tests\/unit\/JobContractFlowTest.php": {
+        "status": "NO_TESTS",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_JobContractFlowTest.php.txt"
+    },
+    "tests\/unit\/ResidentUserLookupTest.php": {
+        "status": "PASS",
+        "tests": 2,
+        "assertions": 10,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ResidentUserLookupTest.php.txt"
+    },
+    "tests\/unit\/ResidentAuthValidationTest.php": {
+        "status": "PASS",
+        "tests": 6,
+        "assertions": 11,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ResidentAuthValidationTest.php.txt"
+    },
+    "tests\/unit\/ResidentOtpServiceFlowTest.php": {
+        "status": "PASS",
+        "tests": 2,
+        "assertions": 6,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ResidentOtpServiceFlowTest.php.txt"
+    },
+    "tests\/unit\/ResponseFormatterTest.php": {
+        "status": "PASS",
+        "tests": 3,
+        "assertions": 19,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ResponseFormatterTest.php.txt"
+    },
+    "tests\/unit\/ResidentContactVerificationServiceTest.php": {
+        "status": "PASS",
+        "tests": 5,
+        "assertions": 16,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ResidentContactVerificationServiceTest.php.txt"
+    },
+    "tests\/unit\/ResidentPortalMetricsTest.php": {
+        "status": "PASS",
+        "tests": 2,
+        "assertions": 7,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ResidentPortalMetricsTest.php.txt"
+    },
+    "tests\/unit\/ResidentPortalMetricsCacheTest.php": {
+        "status": "PASS",
+        "tests": 2,
+        "assertions": 4,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ResidentPortalMetricsCacheTest.php.txt"
+    },
+    "tests\/unit\/ResidentNotificationPreferenceServiceTest.php": {
+        "status": "PASS",
+        "tests": 3,
+        "assertions": 12,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_ResidentNotificationPreferenceServiceTest.php.txt"
+    },
+    "tests\/unit\/UtilsSanitizeTest.php": {
+        "status": "PASS",
+        "tests": 4,
+        "assertions": 9,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_unit_UtilsSanitizeTest.php.txt"
+    },
+    "tests\/integration\/ControllerIntegrationTest.php": {
+        "status": "PASS",
+        "tests": 3,
+        "assertions": 6,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_integration_ControllerIntegrationTest.php.txt"
+    },
+    "tests\/integration\/CrawlFlowTest.php": {
+        "status": "UNKNOWN",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_integration_CrawlFlowTest.php.txt"
+    },
+    "tests\/functional\/JobCustomerFinanceFlowTest.php": {
+        "status": "NO_TESTS",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_functional_JobCustomerFinanceFlowTest.php.txt"
+    },
+    "tests\/functional\/RbacAccessTest.php": {
+        "status": "UNKNOWN",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_functional_RbacAccessTest.php.txt"
+    },
+    "tests\/functional\/ApiFeatureTest.php": {
+        "status": "PASS",
+        "tests": 5,
+        "assertions": 26,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_functional_ApiFeatureTest.php.txt"
+    },
+    "tests\/functional\/ResidentProfileTest.php": {
+        "status": "NO_TESTS",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_functional_ResidentProfileTest.php.txt"
+    },
+    "tests\/functional\/ResidentPaymentTest.php": {
+        "status": "NO_TESTS",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_functional_ResidentPaymentTest.php.txt"
+    },
+    "tests\/functional\/ManagementResidentsTest.php": {
+        "status": "NO_TESTS",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_functional_ManagementResidentsTest.php.txt"
+    },
+    "tests\/functional\/PaymentTransactionTest.php": {
+        "status": "NO_TESTS",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_functional_PaymentTransactionTest.php.txt"
+    },
+    "tests\/functional\/AuthSessionTest.php": {
+        "status": "NO_TESTS",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_functional_AuthSessionTest.php.txt"
+    },
+    "tests\/functional\/HeaderSecurityTest.php": {
+        "status": "NO_TESTS",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_functional_HeaderSecurityTest.php.txt"
+    },
+    "tests\/security\/XssPreventionTest.php": {
+        "status": "PASS",
+        "tests": 6,
+        "assertions": 12,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_security_XssPreventionTest.php.txt"
+    },
+    "tests\/security\/SqlInjectionTest.php": {
+        "status": "PASS",
+        "tests": 4,
+        "assertions": 5,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_security_SqlInjectionTest.php.txt"
+    },
+    "tests\/security\/CsrfProtectionTest.php": {
+        "status": "PASS",
+        "tests": 6,
+        "assertions": 9,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_security_CsrfProtectionTest.php.txt"
+    },
+    "tests\/performance\/PerformanceTest.php": {
+        "status": "UNKNOWN",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_performance_PerformanceTest.php.txt"
+    },
+    "tests\/ResidentOtpServiceTest.php": {
+        "status": "PASS",
+        "tests": 3,
+        "assertions": 18,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_ResidentOtpServiceTest.php.txt"
+    },
+    "tests\/CustomerOtpServiceTest.php": {
+        "status": "UNKNOWN",
+        "tests": 0,
+        "assertions": 0,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_CustomerOtpServiceTest.php.txt"
+    },
+    "tests\/HeaderManagerTest.php": {
+        "status": "PASS",
+        "tests": 7,
+        "assertions": 40,
+        "failures": 0,
+        "errors": 0,
+        "output_file": "C:\\X\\Yaz\u0131l\u0131m\\Alastyr_ftp\\kuretemizlik.com\\app\\tests\/test_outputs\/tests_HeaderManagerTest.php.txt"
+    }
+}

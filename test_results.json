@@ -1,0 +1,104 @@
+{
+    "timestamp": "2025-11-21 00:08:44",
+    "total": 19,
+    "passed": 19,
+    "failed": 0,
+    "results": [
+        {
+            "name": "Database Connection",
+            "status": "PASS",
+            "message": "PDO instance alındı"
+        },
+        {
+            "name": "PRAGMA foreign_keys",
+            "status": "PASS",
+            "message": "Foreign keys: ON"
+        },
+        {
+            "name": "Transaction Started",
+            "status": "PASS",
+            "message": "Transaction başlatıldı"
+        },
+        {
+            "name": "Nested Transaction Protection",
+            "status": "PASS",
+            "message": "Nested transaction koruması çalışıyor"
+        },
+        {
+            "name": "Transaction Committed",
+            "status": "PASS",
+            "message": "Transaction commit edildi"
+        },
+        {
+            "name": "PRAGMA foreign_keys OFF",
+            "status": "PASS",
+            "message": "Foreign keys kapatıldı"
+        },
+        {
+            "name": "PRAGMA foreign_keys ON",
+            "status": "PASS",
+            "message": "Foreign keys açıldı"
+        },
+        {
+            "name": "Customer::all()",
+            "status": "PASS",
+            "message": "0 müşteri bulundu"
+        },
+        {
+            "name": "Customer Model Instance",
+            "status": "PASS",
+            "message": "Customer model oluşturuldu"
+        },
+        {
+            "name": "Database::delete() Method",
+            "status": "PASS",
+            "message": "Delete metodu mevcut"
+        },
+        {
+            "name": "Class: Database",
+            "status": "PASS",
+            "message": "Class yüklendi"
+        },
+        {
+            "name": "Class: Auth",
+            "status": "PASS",
+            "message": "Class yüklendi"
+        },
+        {
+            "name": "Class: Customer",
+            "status": "PASS",
+            "message": "Class yüklendi"
+        },
+        {
+            "name": "Class: CSRF",
+            "status": "PASS",
+            "message": "Class yüklendi"
+        },
+        {
+            "name": "Class: InputSanitizer",
+            "status": "PASS",
+            "message": "Class yüklendi"
+        },
+        {
+            "name": "Class: Validator",
+            "status": "PASS",
+            "message": "Class yüklendi"
+        },
+        {
+            "name": "Class: Job",
+            "status": "PASS",
+            "message": "Class yüklendi"
+        },
+        {
+            "name": "Database Singleton",
+            "status": "PASS",
+            "message": "Aynı instance döndürülüyor"
+        },
+        {
+            "name": "Transaction Rollback",
+            "status": "PASS",
+            "message": "Transaction rollback edildi: Test rollback"
+        }
+    ],
+    "errors": []
+}

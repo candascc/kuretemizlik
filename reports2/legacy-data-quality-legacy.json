@@ -1,0 +1,43 @@
+﻿{
+    "profile": "legacy",
+    "db": "C:\\X\\Yaz─▒l─▒m\\eskiler\\kuretemizlik.com1\\kuretemizlik.com\\app\\db\\app.sqlite",
+    "generated_at": "2025-11-14T21:16:29+01:00",
+    "scalar": {
+        "users": 25,
+        "customers": 17,
+        "addresses": 4,
+        "services": 8,
+        "jobs": 56,
+        "job_payments": 26,
+        "money_entries": 97,
+        "appointments": 0,
+        "payments": null,
+        "rate_limits": 4,
+        "activity_log": 3198,
+        "jobs_missing_start": 0,
+        "jobs_missing_end": 0,
+        "jobs_amount_mismatch": 0,
+        "appointments_missing_dates": null,
+        "payments_non_positive": null
+    },
+    "pairs": {
+        "jobs_status_distribution": [
+            {
+                "label": "DONE",
+                "value": 36
+            },
+            {
+                "label": "SCHEDULED",
+                "value": 20
+            }
+        ],
+        "appointments_status_distribution": [],
+        "payments_method_distribution": []
+    },
+    "warnings": {
+        "payments": "Missing tables: payments",
+        "appointments_missing_dates": "SQLSTATE[HY000]: General error: 1 no such column: start_at",
+        "payments_non_positive": "Missing tables: payments",
+        "payments_method_distribution": "Missing tables: payments"
+    }
+}

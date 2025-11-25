@@ -1,0 +1,97 @@
+name: Run Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        php-version: ['8.1', '8.2']
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          extensions: sqlite, pdo_sqlite, mbstring, json
+          coverage: xdebug
+      
+      - name: Install dependencies
+        run: |
+          composer install --prefer-dist --no-progress --no-interaction
+      
+      - name: Run tests
+        run: |
+          php tests/run_all_tests_one_by_one.php
+      
+      - name: Generate coverage
+        run: |
+          php tests/run_coverage.php
+        continue-on-error: true
+      
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v3
+        with:
+          files: tests/coverage/coverage.json
+          fail_ci_if_error: false
+        continue-on-error: true
+      
+      - name: Generate test dashboard
+        run: |
+          php tests/generate_dashboard.php
+        continue-on-error: true
+      
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: test-results-php-${{ matrix.php-version }}
+          path: |
+            tests/test_outputs/
+            tests/coverage/
+            tests/test_dashboard.html
+          retention-days: 30
+
+  test-stress:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || contains(github.event.head_commit.message, '[stress]')
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: sqlite, pdo_sqlite, mbstring, json
+      
+      - name: Install dependencies
+        run: |
+          composer install --prefer-dist --no-progress --no-interaction
+      
+      - name: Run stress tests
+        run: |
+          php tests/run_all_tests_one_by_one.php --stress
+        timeout-minutes: 60
+      
+      - name: Upload stress test results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: stress-test-results
+          path: tests/test_outputs/
+          retention-days: 7
+

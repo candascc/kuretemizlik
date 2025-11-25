@@ -1,0 +1,35 @@
+{
+    "generated_at": "2025-11-25 03:59:07",
+    "total_time": 0.69,
+    "suites": {
+        "Fast": {
+            "duration": 0.2,
+            "test_count": 0,
+            "avg_time": 0,
+            "max_time": 0,
+            "min_time": 0
+        },
+        "Slow": {
+            "duration": 0.15,
+            "test_count": 0,
+            "avg_time": 0,
+            "max_time": 0,
+            "min_time": 0
+        },
+        "Stress": {
+            "duration": 0.16,
+            "test_count": 0,
+            "avg_time": 0,
+            "max_time": 0,
+            "min_time": 0
+        },
+        "Load": {
+            "duration": 0.18,
+            "test_count": 0,
+            "avg_time": 0,
+            "max_time": 0,
+            "min_time": 0
+        }
+    },
+    "slow_tests": []
+}

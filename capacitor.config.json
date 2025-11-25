@@ -1,0 +1,1 @@
+{"appId":"com.kuretemizlik.app","appName":"Kure Temizlik","bundledWebRuntime":false,"npmClient":"npm","webDir":"www","server":{"androidScheme":"https","iosScheme":"https","cleartext":false},"plugins":{"PushNotifications":{"presentationOptions":["alert","sound"]},"SplashScreen":{"launchShowDuration":0}},"cordova":{}}

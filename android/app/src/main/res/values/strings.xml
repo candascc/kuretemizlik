@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Küre Temizlik</string>
+    <string name="title_activity_main">Küre Temizlik</string>
+    <string name="package_name">com.kuretemizlik.app</string>
+    <string name="custom_url_scheme">com.kuretemizlik.app</string>
+</resources>

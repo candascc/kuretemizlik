@@ -1,0 +1,28 @@
+parameters:
+    level: 5
+    paths:
+        - src
+    excludePaths:
+        - src/Views
+        - src/Console
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    phpVersion: 70400
+    tmpDir: .phpstan-cache
+    ignoreErrors:
+        # Use baseline file for known errors
+        - '#Call to an undefined method#'
+        - '#Access to an undefined property#'
+        - '#Parameter .* has no typehint specified#'
+        - '#Method .* has no return typehint specified#'
+        -
+            identifier: missingType.iterableValue
+        -
+            identifier: missingType.generics
+
+
+
+
+
+
+

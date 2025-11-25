@@ -1,0 +1,768 @@
+Array
+(
+    [mode] => operations
+    [available_modes] => Array
+        (
+            [operations] => Array
+                (
+                    [label] => Temizlik Operasyonları
+                    [short_label] => Operasyon
+                    [description] => Temizlik planlama, saha yönetimi ve operasyonel modüller
+                    [theme] => Array
+                        (
+                            [class] => mode-operations
+                            [nav_gradient] => from-primary-600 to-primary-700
+                            [accent] => text-primary-100
+                            [chip_bg] => bg-white/15
+                            [chip_border] => border-white/20
+                            [quick_action] => variant-operations
+                            [context_bg] => bg-primary-900/10
+                        )
+
+                )
+
+            [management] => Array
+                (
+                    [label] => Yönetim Hizmetleri
+                    [short_label] => Yönetim
+                    [description] => Apartman, site ve sakin yönetimi modülleri
+                    [theme] => Array
+                        (
+                            [class] => mode-management
+                            [nav_gradient] => from-indigo-500 to-emerald-500
+                            [accent] => text-emerald-100
+                            [chip_bg] => bg-white/18
+                            [chip_border] => border-white/30
+                            [quick_action] => variant-management
+                            [context_bg] => bg-emerald-900/15
+                        )
+
+                )
+
+        )
+
+    [nav] => Array
+        (
+            [0] => Array
+                (
+                    [key] => dashboard
+                    [label] => Ana
+                    [icon] => fa-home
+                    [url] => /
+                    [roles] => Array
+                        (
+                            [0] => *
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                            [1] => management
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [key] => calendar
+                    [label] => Takvim
+                    [icon] => fa-calendar
+                    [url] => /calendar
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => OPERATOR
+                            [2] => SUPPORT
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                            [1] => management
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [key] => jobs
+                    [label] => İşler
+                    [icon] => fa-tasks
+                    [url] => /jobs
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => OPERATOR
+                            [2] => SUPPORT
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [key] => customers
+                    [label] => Müşteriler
+                    [icon] => fa-users
+                    [url] => /customers
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => OPERATOR
+                            [2] => FINANCE
+                            [3] => SUPPORT
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                            [1] => management
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [key] => management
+                    [label] => Yönetim
+                    [icon] => fa-briefcase
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => OPERATOR
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                        )
+
+                    [children] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [label] => Finans
+                                    [icon] => fa-chart-line
+                                    [url] => /finance
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => FINANCE
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [label] => Randevular
+                                    [icon] => fa-calendar-check
+                                    [url] => /appointments
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => OPERATOR
+                                            [2] => SUPPORT
+                                        )
+
+                                )
+
+                            [2] => Array
+                                (
+                                    [label] => Sözleşmeler
+                                    [icon] => fa-file-contract
+                                    [url] => /contracts
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => FINANCE
+                                        )
+
+                                )
+
+                            [3] => Array
+                                (
+                                    [label] => Personel
+                                    [icon] => fa-user-tie
+                                    [url] => /staff
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => OPERATOR
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [key] => operations
+                    [label] => Operasyon
+                    [icon] => fa-cogs
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => OPERATOR
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                        )
+
+                    [children] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [label] => Periyodik
+                                    [icon] => fa-redo
+                                    [url] => /recurring
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => OPERATOR
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [label] => Hizmetler
+                                    [icon] => fa-concierge-bell
+                                    [url] => /services
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => OPERATOR
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [6] => Array
+                (
+                    [key] => management-services
+                    [label] => Yönetim Hizmetleri
+                    [icon] => fa-city
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => SITE_MANAGER
+                            [2] => FINANCE
+                            [3] => OPERATOR
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                            [1] => management
+                        )
+
+                    [children] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [label] => Yönetim Dashboard
+                                    [icon] => fa-gauge-high
+                                    [url] => /management/dashboard
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SITE_MANAGER
+                                            [2] => FINANCE
+                                        )
+
+                                    [group] => Genel
+                                )
+
+                            [1] => Array
+                                (
+                                    [label] => Binalar
+                                    [icon] => fa-building
+                                    [url] => /buildings
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SITE_MANAGER
+                                            [2] => OPERATOR
+                                        )
+
+                                    [group] => Varlıklar
+                                )
+
+                            [2] => Array
+                                (
+                                    [label] => Daireler
+                                    [icon] => fa-home
+                                    [url] => /units
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SITE_MANAGER
+                                        )
+
+                                    [group] => Varlıklar
+                                )
+
+                            [3] => Array
+                                (
+                                    [label] => Tesis & Rezervasyon
+                                    [icon] => fa-door-open
+                                    [url] => /reservations
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SITE_MANAGER
+                                        )
+
+                                    [group] => Varlıklar
+                                )
+
+                            [4] => Array
+                                (
+                                    [label] => Aidat Yönetimi
+                                    [icon] => fa-money-bill-wave
+                                    [url] => /management-fees
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SITE_MANAGER
+                                            [2] => FINANCE
+                                        )
+
+                                    [group] => Finans
+                                )
+
+                            [5] => Array
+                                (
+                                    [label] => Gider Yönetimi
+                                    [icon] => fa-receipt
+                                    [url] => /expenses
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SITE_MANAGER
+                                            [2] => FINANCE
+                                        )
+
+                                    [group] => Finans
+                                )
+
+                            [6] => Array
+                                (
+                                    [label] => Finansal Raporlar
+                                    [icon] => fa-chart-line
+                                    [url] => /building-reports/financial
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SITE_MANAGER
+                                            [2] => FINANCE
+                                        )
+
+                                    [group] => Finans
+                                )
+
+                            [7] => Array
+                                (
+                                    [label] => Doküman Merkezi
+                                    [icon] => fa-file-alt
+                                    [url] => /documents
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SITE_MANAGER
+                                        )
+
+                                    [group] => İletişim
+                                )
+
+                            [8] => Array
+                                (
+                                    [label] => Toplantılar
+                                    [icon] => fa-people-group
+                                    [url] => /meetings
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SITE_MANAGER
+                                        )
+
+                                    [group] => İletişim
+                                )
+
+                            [9] => Array
+                                (
+                                    [label] => Duyurular
+                                    [icon] => fa-bullhorn
+                                    [url] => /announcements
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SITE_MANAGER
+                                            [2] => SUPPORT
+                                        )
+
+                                    [group] => İletişim
+                                )
+
+                            [10] => Array
+                                (
+                                    [label] => Anketler
+                                    [icon] => fa-poll
+                                    [url] => /surveys
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SITE_MANAGER
+                                        )
+
+                                    [group] => İletişim
+                                )
+
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [key] => analytics
+                    [label] => Analitik
+                    [icon] => fa-analytics
+                    [url] => /analytics
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => MANAGEMENT
+                            [2] => FINANCE
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                            [1] => management
+                        )
+
+                )
+
+            [8] => Array
+                (
+                    [key] => reports
+                    [label] => Raporlar
+                    [icon] => fa-chart-bar
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => FINANCE
+                            [2] => SITE_MANAGER
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                            [1] => management
+                        )
+
+                    [children] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [label] => Tüm Raporlar
+                                    [icon] => fa-list
+                                    [url] => /reports
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => FINANCE
+                                            [2] => SITE_MANAGER
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [label] => Finansal Rapor
+                                    [icon] => fa-money-bill-wave
+                                    [url] => /reports/financial
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => FINANCE
+                                            [2] => SITE_MANAGER
+                                        )
+
+                                )
+
+                            [2] => Array
+                                (
+                                    [label] => İş Raporu
+                                    [icon] => fa-tasks
+                                    [url] => /reports/jobs
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => OPERATOR
+                                        )
+
+                                )
+
+                            [3] => Array
+                                (
+                                    [label] => Müşteri Raporu
+                                    [icon] => fa-users
+                                    [url] => /reports/customers
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => FINANCE
+                                            [2] => SUPPORT
+                                        )
+
+                                )
+
+                            [4] => Array
+                                (
+                                    [label] => Hizmet Analizi
+                                    [icon] => fa-concierge-bell
+                                    [url] => /reports/services
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => OPERATOR
+                                        )
+
+                                )
+
+                            [5] => Array
+                                (
+                                    [label] => Veri Dışa Aktarma
+                                    [icon] => fa-download
+                                    [url] => /export
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => FINANCE
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [9] => Array
+                (
+                    [key] => settings
+                    [label] => Ayarlar
+                    [icon] => fa-cog
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => SUPERADMIN
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                            [1] => management
+                        )
+
+                    [children] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [label] => Profil
+                                    [icon] => fa-user
+                                    [url] => /settings/profile
+                                    [roles] => Array
+                                        (
+                                            [0] => *
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [label] => Güvenlik
+                                    [icon] => fa-shield-alt
+                                    [url] => /settings/security
+                                    [roles] => Array
+                                        (
+                                            [0] => *
+                                        )
+
+                                )
+
+                            [2] => Array
+                                (
+                                    [label] => Kullanıcılar
+                                    [icon] => fa-users
+                                    [url] => /settings/users
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SUPERADMIN
+                                        )
+
+                                )
+
+                            [3] => Array
+                                (
+                                    [label] => İzleme
+                                    [icon] => fa-chart-line
+                                    [url] => /settings/monitoring
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SUPERADMIN
+                                        )
+
+                                )
+
+                            [4] => Array
+                                (
+                                    [label] => Loglar
+                                    [icon] => fa-file-alt
+                                    [url] => /settings/logs
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SUPERADMIN
+                                        )
+
+                                )
+
+                            [5] => Array
+                                (
+                                    [label] => Yedekleme
+                                    [icon] => fa-database
+                                    [url] => /settings/backup
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SUPERADMIN
+                                        )
+
+                                )
+
+                            [6] => Array
+                                (
+                                    [label] => Email Logları
+                                    [icon] => fa-envelope
+                                    [url] => /admin/emails/logs
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SUPERADMIN
+                                        )
+
+                                )
+
+                            [7] => Array
+                                (
+                                    [label] => Email Queue
+                                    [icon] => fa-list
+                                    [url] => /admin/emails/queue
+                                    [roles] => Array
+                                        (
+                                            [0] => ADMIN
+                                            [1] => SUPERADMIN
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [actions] => Array
+        (
+            [0] => Array
+                (
+                    [label] => Yeni İş
+                    [icon] => fa-plus-circle
+                    [url] => /jobs/new
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => OPERATOR
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [label] => Periyodik İş
+                    [icon] => fa-redo
+                    [url] => /recurring/new
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => OPERATOR
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [label] => Yeni Müşteri
+                    [icon] => fa-user-plus
+                    [url] => /customers/new
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => OPERATOR
+                            [2] => SUPPORT
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                            [1] => management
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [label] => Yeni Tahsilat
+                    [icon] => fa-credit-card
+                    [url] => /finance/new
+                    [roles] => Array
+                        (
+                            [0] => ADMIN
+                            [1] => FINANCE
+                        )
+
+                    [modes] => Array
+                        (
+                            [0] => operations
+                            [1] => management
+                        )
+
+                )
+
+        )
+
+)

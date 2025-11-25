@@ -1,0 +1,79 @@
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php82 .php
+</IfModule>
+
+DirectorySlash On
+
+RewriteEngine On
+
+# Güvenlik: dizin listelemeyi kapat
+Options -Indexes
+
+# Güvenlik: hassas dosyaları engelle (.env, .sqlite, sql dump, composer dosyaları vb.)
+<FilesMatch "(\.env(\.local)?|\.sqlite(\-shm|\-wal)?|\.sql|\.bak|composer\.(json|lock)|phpstan\-baseline\.neon|\.gitignore)$">
+  Require all denied
+</FilesMatch>
+
+# Güvenlik: Debug ve test dosyalarını engelle
+# İstisna: fix_permissions.php, debug_live_login.php ve test_form_submit.php sadece confirm=yes ile erişilebilir
+<FilesMatch "^(check_).*\.php$">
+  Require all denied
+</FilesMatch>
+
+# test_ ile başlayan dosyalar - script içinde güvenlik kontrolü var
+# Sadece confirm=yes ile erişilebilir, test sonrası SİLİNMELİ
+<FilesMatch "^test_.*\.php$">
+  # Bu dosyalar script içinde güvenlik kontrolü yapıyor
+  # confirm=yes parametresi olmadan erişilemez
+</FilesMatch>
+
+# debug_ ile başlayan dosyalar - script içinde güvenlik kontrolü var
+# Sadece confirm=yes ile erişilebilir, test sonrası SİLİNMELİ
+<FilesMatch "^debug_.*\.php$">
+  # Bu dosyalar script içinde güvenlik kontrolü yapıyor
+  # confirm=yes parametresi olmadan erişilemez
+</FilesMatch>
+
+# debug_form_submit.php güvenlik kontrolü (script içinde de kontrol var)
+<FilesMatch "^debug_form_submit\.php$">
+  # Bu dosya script içinde güvenlik kontrolü yapıyor
+  # confirm=yes parametresi olmadan erişilemez
+</FilesMatch>
+
+# fix_permissions.php güvenlik kontrolü (script içinde de kontrol var)
+<FilesMatch "^fix_permissions\.php$">
+  # Bu dosya script içinde güvenlik kontrolü yapıyor
+  # confirm=yes parametresi olmadan erişilemez
+</FilesMatch>
+
+# Güvenlik: uygulama içi hassas dizinlere doğrudan erişimi engelle
+# (uygulama public/ dışından servis edilir; bu klasörler asla web'den açılmamalı)
+RewriteRule ^(db|storage|logs|cache|var|vendor|config|scripts|tests|snapshots|tmp|bin|local-https|nginx)/ - [F,L]
+
+# Long-term caching for static assets
+<IfModule mod_headers.c>
+  <FilesMatch "\.(?:css|js|woff2?|ttf|eot|svg|png|jpe?g|gif|webp)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# Serve static assets directly
+RewriteRule ^assets/ - [L]
+
+# Serve PWA artifacts from public directory
+RewriteRule ^manifest\.json$ public/manifest.json [L]
+# Service Worker kaldırıldı - gereksiz sorun çıkarıyordu
+# RewriteRule ^service-worker\.js$ public/service-worker.js [L]
+
+# (İsteğe bağlı) Temel güvenlik başlıkları — barındırıcı destekliyorsa aktifleştirilebilir
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # CSP projenize göre daraltılmalıdır; geniş izinli örnek aşağıdadır.
+  # Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https:;"
+</IfModule>
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]

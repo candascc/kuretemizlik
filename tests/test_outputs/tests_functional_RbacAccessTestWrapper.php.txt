@@ -1,0 +1,9 @@
+PASS: FINANCE role access control
+PASS: OPERATOR role access control
+PASS: SUPERADMIN access control
+PASS: Unauthenticated access control
+PASS: Role hierarchy access control
+
+=== RBAC Access Test Results ===
+Passed: 5/5
+All tests PASSED!

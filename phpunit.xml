@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php"
+         colors="true"
+         executionOrder="depends,defects"
+         failOnRisky="true"
+         failOnWarning="true"
+         beStrictAboutTestsThatDoNotTestAnything="false"
+         beStrictAboutOutputDuringTests="true"
+         convertDeprecationsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Phase 1">
+            <file>tests/unit/SessionHelperTest.php</file>
+            <file>tests/unit/ArrayAccessSafetyTest.php</file>
+            <file>tests/unit/ErrorHandlingTest.php</file>
+            <file>tests/unit/ExceptionHandlerTest.php</file>
+            <file>tests/unit/ViewExtractSafetyTest.php</file>
+            <file>tests/unit/RecurringOccurrenceMigrationTest.php</file>
+            <file>tests/integration/SessionManagementTest.php</file>
+            <file>tests/integration/RecurringJobGenerationTest.php</file>
+            <file>tests/integration/SessionCookiePathTest.php</file>
+        </testsuite>
+        <testsuite name="Phase 2">
+            <file>tests/unit/ValidatorSecurityTest.php</file>
+            <file>tests/unit/XssPreventionTest.php</file>
+            <file>tests/unit/TransactionRollbackTest.php</file>
+            <file>tests/unit/RateLimitingTest.php</file>
+            <file>tests/unit/FileUploadValidationTest.php</file>
+            <file>tests/unit/CsrfMiddlewareTest.php</file>
+            <file>tests/unit/PasswordResetSecurityTest.php</file>
+        </testsuite>
+        <testsuite name="Phase 4">
+            <file>tests/unit/ControllerTraitTest.php</file>
+            <file>tests/unit/AppConstantsTest.php</file>
+        </testsuite>
+        <testsuite name="All">
+            <directory suffix="Test.php">tests/unit</directory>
+            <directory suffix="Test.php">tests/integration</directory>
+        </testsuite>
+        <testsuite name="Fast">
+            <directory suffix="Test.php">tests/unit</directory>
+        </testsuite>
+        <testsuite name="Slow">
+            <directory suffix="Test.php">tests/integration</directory>
+            <directory suffix="Test.php">tests/functional</directory>
+        </testsuite>
+        <testsuite name="Stress">
+            <directory suffix="Test.php">tests/stress</directory>
+        </testsuite>
+        <testsuite name="Load">
+            <directory suffix="Test.php">tests/load</directory>
+        </testsuite>
+    </testsuites>
+    <coverage>
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+        <exclude>
+            <directory>src/Views</directory>
+            <directory>src/Console</directory>
+        </exclude>
+        <report>
+            <html outputDirectory="tests/coverage"/>
+            <text outputFile="php://stdout"/>
+            <clover outputFile="tests/coverage/clover.xml"/>
+        </report>
+    </coverage>
+    <php>
+        <ini name="error_reporting" value="E_ALL"/>
+        <ini name="display_errors" value="0"/>
+        <ini name="display_startup_errors" value="0"/>
+    </php>
+</phpunit>
+

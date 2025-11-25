@@ -1,0 +1,98 @@
+/**
+ * Data Density Styles - UI-POLISH-004
+ * 
+ * Compact vs Comfortable view styles
+ */
+
+/* ===== COMPACT MODE ===== */
+body.density-compact {
+    /* Reduce padding and spacing */
+}
+
+body.density-compact .card,
+body.density-compact .box {
+    @apply p-3;
+}
+
+body.density-compact table td,
+body.density-compact table th {
+    @apply px-3 py-2 text-sm;
+}
+
+body.density-compact .stat-card {
+    @apply p-3;
+}
+
+body.density-compact .stat-value {
+    @apply text-2xl;
+}
+
+body.density-compact .section-header {
+    @apply text-lg py-2;
+}
+
+body.density-compact .form-field-wrapper {
+    @apply mb-3;
+}
+
+body.density-compact input,
+body.density-compact textarea,
+body.density-compact select {
+    @apply py-2 text-sm;
+}
+
+body.density-compact .dashboard-widget {
+    @apply p-4;
+}
+
+body.density-compact .list-item {
+    @apply py-2;
+}
+
+/* ===== COMFORTABLE MODE (Default) ===== */
+body.density-comfortable .card,
+body.density-comfortable .box {
+    @apply p-6;
+}
+
+body.density-comfortable table td,
+body.density-comfortable table th {
+    @apply px-6 py-4 text-base;
+}
+
+body.density-comfortable .stat-card {
+    @apply p-6;
+}
+
+body.density-comfortable .stat-value {
+    @apply text-3xl;
+}
+
+body.density-comfortable .section-header {
+    @apply text-2xl py-4;
+}
+
+body.density-comfortable .form-field-wrapper {
+    @apply mb-6;
+}
+
+body.density-comfortable input,
+body.density-comfortable textarea,
+body.density-comfortable select {
+    @apply py-3 text-base;
+}
+
+body.density-comfortable .dashboard-widget {
+    @apply p-6;
+}
+
+body.density-comfortable .list-item {
+    @apply py-4;
+}
+
+/* Transitions */
+body.density-compact *,
+body.density-comfortable * {
+    transition: padding 0.2s ease, font-size 0.2s ease;
+}
+

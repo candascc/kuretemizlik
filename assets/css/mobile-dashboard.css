@@ -1,0 +1,92 @@
+/**
+ * Mobile Dashboard Optimization Styles
+ * UX-CRIT-003 Implementation
+ */
+
+/* Mobile-optimized dashboard - STANDARDIZED: Mobile breakpoint (< 640px) */
+@media (max-width: 639px) {
+    .dashboard.mobile-optimized {
+        padding: 1rem;
+    }
+    
+    /* Compact stat cards */
+    .stat-card, .stats-card {
+        padding: 1rem;
+    }
+    
+    .stat-card .icon {
+        font-size: 1.5rem;
+    }
+    
+    .stat-card .value {
+        font-size: 1.75rem;
+    }
+    
+    /* Mobile card view for tables */
+    .mobile-card-view {
+        display: block;
+    }
+    
+    .mobile-card-view .card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Collapsible sections */
+    [data-collapsed="true"] {
+        display: none;
+    }
+    
+    /* Sticky CTA button on mobile */
+    .mobile-cta-sticky {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 40;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Tab navigation */
+    .tab-button {
+        flex-shrink: 0;
+    }
+    
+    .tab-button.active {
+        position: relative;
+    }
+    
+    .tab-button.active::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: currentColor;
+    }
+}
+
+/* Desktop: normal layout - STANDARDIZED: Tablet+ breakpoint (≥ 640px) */
+@media (min-width: 640px) {
+    .mobile-card-view {
+        display: none;
+    }
+    
+    .tab-button {
+        display: none;
+    }
+}
+
+/* Progressive disclosure animations */
+.section-content {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .section-content,
+    .tab-button,
+    [data-collapsed] {
+        transition: none;
+    }
+}
+

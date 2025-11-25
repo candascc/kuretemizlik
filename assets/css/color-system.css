@@ -1,0 +1,232 @@
+/**
+ * Semantic Color Coding System - UI-POLISH-003
+ * 
+ * Consistent, meaningful colors across the application
+ * Enhances visual hierarchy and user comprehension
+ */
+
+/* ===== STATUS COLORS ===== */
+
+/* Job Status */
+.status-scheduled {
+    @apply bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300;
+}
+
+.status-in-progress, .status-in_progress {
+    @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300;
+}
+
+.status-completed {
+    @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300;
+}
+
+.status-cancelled {
+    @apply bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300;
+}
+
+.status-pending {
+    @apply bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300;
+}
+
+/* Payment Status */
+.payment-paid {
+    @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300;
+}
+
+.payment-partial {
+    @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300;
+}
+
+.payment-unpaid {
+    @apply bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300;
+}
+
+.payment-overdue {
+    @apply bg-red-600 text-white dark:bg-red-700;
+}
+
+/* Priority Levels */
+.priority-critical {
+    @apply bg-red-600 text-white dark:bg-red-700;
+}
+
+.priority-high {
+    @apply bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300;
+}
+
+.priority-medium {
+    @apply bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300;
+}
+
+.priority-low {
+    @apply bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300;
+}
+
+/* ===== SEMANTIC COLORS ===== */
+
+/* Success actions */
+.action-success {
+    @apply bg-green-600 hover:bg-green-700 text-white;
+}
+
+/* Danger actions */
+.action-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white;
+}
+
+/* Warning actions */
+.action-warning {
+    @apply bg-yellow-600 hover:bg-yellow-700 text-white;
+}
+
+/* Info actions */
+.action-info {
+    @apply bg-blue-600 hover:bg-blue-700 text-white;
+}
+
+/* Primary actions */
+.action-primary {
+    @apply bg-gradient-to-r from-primary-600 to-blue-600 hover:from-primary-700 hover:to-blue-700 text-white;
+}
+
+/* ===== ROLE COLORS ===== */
+
+.role-superadmin {
+    @apply bg-purple-600 text-white;
+}
+
+.role-admin {
+    @apply bg-indigo-600 text-white;
+}
+
+.role-staff {
+    @apply bg-blue-600 text-white;
+}
+
+.role-operator {
+    @apply bg-teal-600 text-white;
+}
+
+.role-resident {
+    @apply bg-gray-600 text-white;
+}
+
+/* ===== BADGE STYLES ===== */
+
+.badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-sm {
+    @apply px-2 py-0.5 text-xs;
+}
+
+.badge-md {
+    @apply px-3 py-1 text-sm;
+}
+
+.badge-lg {
+    @apply px-4 py-1.5 text-base;
+}
+
+/* Badge with dot indicator */
+.badge-dot::before {
+    content: '';
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    background-color: currentColor;
+}
+
+/* ===== PROGRESS INDICATORS ===== */
+
+.progress-bar {
+    @apply w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden;
+}
+
+.progress-fill {
+    @apply h-full transition-all duration-300;
+}
+
+.progress-fill-success {
+    @apply bg-gradient-to-r from-green-500 to-emerald-500;
+}
+
+.progress-fill-warning {
+    @apply bg-gradient-to-r from-yellow-500 to-amber-500;
+}
+
+.progress-fill-danger {
+    @apply bg-gradient-to-r from-red-500 to-rose-500;
+}
+
+.progress-fill-info {
+    @apply bg-gradient-to-r from-blue-500 to-indigo-500;
+}
+
+/* ===== ALERT COLORS ===== */
+
+.alert {
+    @apply border-l-4 p-4 rounded-lg;
+}
+
+.alert-success {
+    @apply bg-green-50 border-green-600 dark:bg-green-900/20 dark:border-green-500;
+}
+
+.alert-error, .alert-danger {
+    @apply bg-red-50 border-red-600 dark:bg-red-900/20 dark:border-red-500;
+}
+
+.alert-warning {
+    @apply bg-yellow-50 border-yellow-600 dark:bg-yellow-900/20 dark:border-yellow-500;
+}
+
+.alert-info {
+    @apply bg-blue-50 border-blue-600 dark:bg-blue-900/20 dark:border-blue-500;
+}
+
+/* ===== CHART COLORS ===== */
+
+:root {
+    --chart-primary: #3b82f6;
+    --chart-success: #10b981;
+    --chart-warning: #f59e0b;
+    --chart-danger: #ef4444;
+    --chart-info: #06b6d4;
+    --chart-purple: #8b5cf6;
+    --chart-pink: #ec4899;
+}
+
+.chart-color-1 { color: var(--chart-primary); }
+.chart-color-2 { color: var(--chart-success); }
+.chart-color-3 { color: var(--chart-warning); }
+.chart-color-4 { color: var(--chart-danger); }
+.chart-color-5 { color: var(--chart-info); }
+.chart-color-6 { color: var(--chart-purple); }
+.chart-color-7 { color: var(--chart-pink); }
+
+/* ===== ACCESSIBILITY ===== */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .badge, .status, .priority {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Color blind friendly alternatives */
+.colorblind-mode .status-completed::after {
+    content: ' ✓';
+}
+
+.colorblind-mode .status-cancelled::after {
+    content: ' ✗';
+}
+
+.colorblind-mode .status-pending::after {
+    content: ' ⏱';
+}
+

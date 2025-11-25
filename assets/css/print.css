@@ -1,0 +1,246 @@
+/**
+ * Print Styles
+ * Optimized for printing reports, invoices, and lists
+ */
+
+@media print {
+    /* Reset page margins */
+    @page {
+        margin: 1.5cm;
+        size: A4;
+    }
+    
+    /* Hide non-essential elements */
+    header,
+    nav,
+    footer,
+    .no-print,
+    .print-hide,
+    button,
+    .btn,
+    .dropdown,
+    [onclick],
+    .group:hover .dropdown,
+    .relative.group:hover > div {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    /* Full width for print */
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff !important;
+    }
+    
+    /* Remove background colors and shadows */
+    .bg-white,
+    .bg-gray-50,
+    .bg-gray-100,
+    .bg-gradient-to-br,
+    .bg-gradient-to-r {
+        background: white !important;
+    }
+    
+    /* Remove shadows and borders for cleaner print */
+    .shadow-lg,
+    .shadow-xl,
+    .shadow-soft,
+    .shadow,
+    .rounded-xl,
+    .rounded-lg,
+    .rounded,
+    .border {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+    
+    /* Ensure tables are well-formatted */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #000 !important;
+        margin: 10px 0;
+        page-break-inside: auto;
+    }
+    
+    table thead {
+        display: table-header-group;
+        background: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    table tbody tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+        border-bottom: 1px solid #ddd !important;
+    }
+    
+    table th,
+    table td {
+        border: 1px solid #ddd !important;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    /* Card styling */
+    .card,
+    .bg-white,
+    .bg-gray-50 {
+        background: white !important;
+        border: 1px solid #ddd !important;
+        padding: 15px;
+        margin: 10px 0;
+        page-break-inside: avoid;
+    }
+    
+    /* Headers */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        color: #000 !important;
+    }
+    
+    /* Statistics cards - grid to columns */
+    .grid {
+        display: grid !important;
+    }
+    
+    .grid-cols-1 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .grid-cols-2 {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    
+    .grid-cols-4 {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    
+    /* Remove flex layouts that cause issues */
+    .flex {
+        display: block !important;
+    }
+    
+    /* Image optimization */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Remove gradients and use solid colors */
+    .bg-gradient-to-br,
+    .bg-gradient-to-r,
+    .from-blue-50,
+    .to-blue-100 {
+        background: #f0f0f0 !important;
+    }
+    
+    /* Ensure readable text colors */
+    .text-primary-600,
+    .text-blue-600,
+    .text-green-600,
+    .text-red-600,
+    .text-purple-600 {
+        color: #000 !important;
+    }
+    
+    /* Badge/status colors */
+    .bg-green-100,
+    .bg-red-100,
+    .bg-yellow-100,
+    .bg-blue-100 {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+    }
+    
+    /* Dark mode overrides */
+    .dark,
+    [class*="dark:"] {
+        background: white !important;
+        color: #000 !important;
+    }
+    
+    /* Page breaks */
+    .page-break-before {
+        page-break-before: always;
+    }
+    
+    .page-break-after {
+        page-break-after: always;
+    }
+    
+    .page-break-inside-avoid {
+        page-break-inside: avoid;
+    }
+    
+    /* Footer for print */
+    .print-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 10pt;
+        color: #666;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+    }
+    
+    /* Page numbers */
+    @page {
+        @bottom-right {
+            content: counter(page) " / " counter(pages);
+            font-size: 10pt;
+            color: #666;
+        }
+    }
+    
+    /* Avoid breaking these elements */
+    .no-break,
+    .inline-block {
+        display: inline-block !important;
+    }
+    
+    /* Tab content - show all tabs */
+    .tab-content {
+        display: block !important;
+    }
+    
+    .hidden {
+        display: block !important;
+    }
+    
+    /* Spacing adjustments */
+    .space-y-8 > * + *,
+    .space-y-6 > * + *,
+    .space-y-4 > * + * {
+        margin-top: 15px;
+    }
+    
+    /* Charts - hide or show as requested */
+    canvas {
+        max-width: 100%;
+        height: auto !important;
+    }
+    
+    /* Logo placement */
+    .print-logo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    /* Watermark (optional) */
+    .watermark {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        font-size: 72pt;
+        opacity: 0.05;
+        color: #000;
+        z-index: -1;
+    }
+}
+
