@@ -6,10 +6,18 @@
 deployment:
   tasks:
     # Set deployment path (adjust based on your cPanel account structure)
-    # Common paths:
-    # - /home/username/public_html/app (if app is in subdirectory)
-    # - /home/username/public_html (if app is in root)
-    - export DEPLOYPATH=/home/$${CPANEL_USER}/public_html/app
+    # IMPORTANT: Update this path to match your actual hosting structure
+    # 
+    # Option 1: If repository is separate from web root (RECOMMENDED)
+    # Repository Path: /home/username/repositories/kuretemizlik
+    # Deployment Path: /home/username/kuretemizlik.com/app
+    - export DEPLOYPATH=/home/$${CPANEL_USER}/kuretemizlik.com/app
+    #
+    # Option 2: If using public_html structure
+    # - export DEPLOYPATH=/home/$${CPANEL_USER}/public_html/app
+    #
+    # Option 3: If app is in root
+    # - export DEPLOYPATH=/home/$${CPANEL_USER}/public_html
     
     # Backup current deployment (optional but recommended)
     - /bin/mkdir -p $${DEPLOYPATH}/../backups
