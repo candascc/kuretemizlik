@@ -1,10 +1,14 @@
 name: CI
 
+# DISABLED: Workflow disabled to prevent error emails
+# Only manual trigger is available
+# To enable: Uncomment push/pull_request triggers below
 on:
-  push:
-    branches: [ main, master, develop ]
-  pull_request:
-    branches: [ main, master, develop ]
+  workflow_dispatch:  # Manual trigger only
+  # push:
+  #   branches: [ main, master, develop ]
+  # pull_request:
+  #   branches: [ main, master, develop ]
 
 jobs:
   phpstan:
