@@ -1,0 +1,48 @@
+---
+# cPanel Deployment Configuration
+# This file defines how cPanel should deploy your application
+# Documentation: https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-set-up-deployment/
+
+deployment:
+  tasks:
+    # Set deployment path (adjust based on your cPanel account structure)
+    # Common paths:
+    # - /home/username/public_html/app (if app is in subdirectory)
+    # - /home/username/public_html (if app is in root)
+    - export DEPLOYPATH=/home/$${CPANEL_USER}/public_html/app
+    
+    # Backup current deployment (optional but recommended)
+    - /bin/mkdir -p $${DEPLOYPATH}/../backups
+    - /bin/tar -czf $${DEPLOYPATH}/../backups/backup-$$(date +%Y%m%d-%H%M%S).tar.gz -C $${DEPLOYPATH} . 2>/dev/null || true
+    
+    # Copy all files to deployment path
+    - /bin/cp -R * $${DEPLOYPATH}/
+    
+    # Set proper permissions for directories
+    - /bin/find $${DEPLOYPATH} -type d -exec chmod 755 {} \;
+    
+    # Set proper permissions for files
+    - /bin/find $${DEPLOYPATH} -type f -exec chmod 644 {} \;
+    
+    # Make PHP files executable if needed
+    - /bin/chmod 755 $${DEPLOYPATH}/index.php 2>/dev/null || true
+    
+    # Protect sensitive files (.env, config files)
+    - /bin/chmod 600 $${DEPLOYPATH}/.env 2>/dev/null || true
+    - /bin/chmod 600 $${DEPLOYPATH}/env.production 2>/dev/null || true
+    
+    # Clean up temporary files
+    - /bin/rm -rf $${DEPLOYPATH}/.git
+    - /bin/rm -rf $${DEPLOYPATH}/test-results
+    - /bin/rm -rf $${DEPLOYPATH}/tests/_output
+    - /bin/rm -rf $${DEPLOYPATH}/node_modules/.cache
+    
+    # Run Composer install (if vendor directory is not in git)
+    - cd $${DEPLOYPATH} && /usr/local/bin/php /usr/local/bin/composer install --no-dev --optimize-autoloader --no-interaction 2>/dev/null || true
+    
+    # Clear cache
+    - /bin/rm -rf $${DEPLOYPATH}/cache/* 2>/dev/null || true
+    
+    # Log deployment
+    - echo "Deployment completed at $$(date)" >> $${DEPLOYPATH}/../deployment.log
+

@@ -1,0 +1,59 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches: [ master, main ]
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
+      - 'docs/**'
+      - 'test-results/**'
+      - 'tests/**'
+  workflow_dispatch:  # Manual trigger option
+
+jobs:
+  deploy:
+    name: Deploy to cPanel Hosting
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup deployment info
+        run: |
+          echo "Deployment triggered by: ${{ github.actor }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Message: ${{ github.event.head_commit.message }}"
+      
+      - name: Deployment notification
+        run: |
+          echo "✅ Code pushed to GitHub successfully"
+          echo "📦 Next step: Pull and deploy from cPanel Git Version Control"
+          echo ""
+          echo "To deploy:"
+          echo "1. Go to cPanel > Git Version Control"
+          echo "2. Click 'Manage' on your repository"
+          echo "3. Click 'Pull or Deploy' tab"
+          echo "4. Click 'Update from Remote'"
+          echo "5. Click 'Deploy HEAD Commit'"
+      
+      # Optional: Send notification (email, Slack, etc.)
+      - name: Deployment summary
+        run: |
+          echo "## Deployment Ready" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Author:** ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Message:** ${{ github.event.head_commit.message }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Next Steps:" >> $GITHUB_STEP_SUMMARY
+          echo "1. Go to cPanel > Git Version Control" >> $GITHUB_STEP_SUMMARY
+          echo "2. Click 'Manage' on your repository" >> $GITHUB_STEP_SUMMARY
+          echo "3. Click 'Pull or Deploy' tab" >> $GITHUB_STEP_SUMMARY
+          echo "4. Click 'Update from Remote'" >> $GITHUB_STEP_SUMMARY
+          echo "5. Click 'Deploy HEAD Commit'" >> $GITHUB_STEP_SUMMARY
+
