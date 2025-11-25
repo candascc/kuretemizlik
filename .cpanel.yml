@@ -2,22 +2,16 @@
 # cPanel Deployment Configuration
 # This file defines how cPanel should deploy your application
 # Documentation: https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-set-up-deployment/
+#
+# Repository Path: /home/cagdasya/repositories/kuretemizlik
+# Deployment Path: /home/cagdasya/kuretemizlik.com/app
 
 deployment:
   tasks:
-    # Set deployment path (adjust based on your cPanel account structure)
-    # IMPORTANT: Update this path to match your actual hosting structure
-    # 
-    # Option 1: If repository is separate from web root (RECOMMENDED)
-    # Repository Path: /home/username/repositories/kuretemizlik
-    # Deployment Path: /home/username/kuretemizlik.com/app
+    # Set deployment path
+    # CPANEL_USER will be automatically replaced with 'cagdasya'
+    # Final path: /home/cagdasya/kuretemizlik.com/app
     - export DEPLOYPATH=/home/$${CPANEL_USER}/kuretemizlik.com/app
-    #
-    # Option 2: If using public_html structure
-    # - export DEPLOYPATH=/home/$${CPANEL_USER}/public_html/app
-    #
-    # Option 3: If app is in root
-    # - export DEPLOYPATH=/home/$${CPANEL_USER}/public_html
     
     # Backup current deployment (optional but recommended)
     - /bin/mkdir -p $${DEPLOYPATH}/../backups
@@ -32,12 +26,22 @@ deployment:
     # Set proper permissions for files
     - /bin/find $${DEPLOYPATH} -type f -exec chmod 644 {} \;
     
-    # Make PHP files executable if needed
+    # Make PHP files executable
     - /bin/chmod 755 $${DEPLOYPATH}/index.php 2>/dev/null || true
+    
+    # Set write permissions for specific directories (required for app to work)
+    - /bin/chmod 775 $${DEPLOYPATH}/db 2>/dev/null || true
+    - /bin/chmod 775 $${DEPLOYPATH}/logs 2>/dev/null || true
+    - /bin/chmod 775 $${DEPLOYPATH}/cache 2>/dev/null || true
+    - /bin/chmod 775 $${DEPLOYPATH}/uploads 2>/dev/null || true
     
     # Protect sensitive files (.env, config files)
     - /bin/chmod 600 $${DEPLOYPATH}/.env 2>/dev/null || true
     - /bin/chmod 600 $${DEPLOYPATH}/env.production 2>/dev/null || true
+    - /bin/chmod 600 $${DEPLOYPATH}/env.local 2>/dev/null || true
+    
+    # Note: .env file is not in git, you need to create it manually in production
+    # Copy env.production.example to .env and configure it
     
     # Clean up temporary files
     - /bin/rm -rf $${DEPLOYPATH}/.git
