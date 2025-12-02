@@ -30,43 +30,14 @@ $stepTitle = match ($step) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($title ?? 'Sakin Portalı') ?></title>
     
-    <!-- Critical CSS for Login Page - Performance: Inline critical styles for faster FCP -->
-    <style>
-        /* Critical CSS: Above-the-fold layout and typography */
-        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;margin:0;padding:0;background:#f3f4f6;min-height:100vh}
-        .min-h-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:3rem 1rem}
-        .flex{display:flex}
-        .justify-center{justify-content:center}
-        .items-center{align-items:center}
-        .mb-6{margin-bottom:1.5rem}
-        .block{display:block}
-        .h-28{height:7rem}
-        .w-28{width:7rem}
-        .rounded-full{border-radius:9999px}
-        .overflow-hidden{overflow:hidden}
-        .h-full{height:100%}
-        .w-full{width:100%}
-        .object-cover{object-fit:cover}
-        .grid{display:grid}
-        .gap-8{gap:2rem}
-        .rounded-3xl{border-radius:1.5rem}
-        .bg-white{background-color:#fff}
-        .p-8{padding:2rem}
-        .shadow-xl{box-shadow:0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04)}
-        .ring-1{box-shadow:0 0 0 1px rgba(0,0,0,0.05)}
-        .ring-gray-100{box-shadow:0 0 0 1px rgba(243,244,246,1)}
-        .max-w-4xl{max-width:56rem}
-        .w-full{width:100%}
-        @media(min-width:1024px){.lg\:grid-cols-\[1\.05fr_0\.95fr\]{grid-template-columns:1.05fr 0.95fr}.lg\:gap-12{gap:3rem}}
-        @media(min-width:640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}
-    </style>
-    
+    <!-- Critical CSS for Login Page - Performance: Moved to external CSS for CSP compliance -->
+    <link rel="stylesheet" href="<?= Utils::asset('css/custom.css') ?>?v=<?= file_exists(__DIR__ . '/../../../assets/css/custom.css') ? filemtime(__DIR__ . '/../../../assets/css/custom.css') : time() ?>">
     <link rel="stylesheet" href="<?= Utils::asset('css/tailwind.css') ?>?v=<?= file_exists(__DIR__ . '/../../../assets/css/tailwind.css') ? filemtime(__DIR__ . '/../../../assets/css/tailwind.css') : time() ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="h-full">
-    <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-        <div class="w-full max-w-4xl">
+<body class="h-full resident-login-body">
+    <main id="main-content" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 py-12 px-4 sm:px-6 lg:px-8" role="main">
+        <div class="w-full max-w-4xl content container">
             <div class="flex justify-center mb-6">
                 <span class="block h-28 w-28 rounded-full overflow-hidden">
                     <img src="<?= Utils::asset('img/logokureapp.png') ?>" width="120" height="120" alt="Küre Temizlik Logosu"
@@ -145,7 +116,7 @@ $stepTitle = match ($step) {
                             </div>
 
                             <div class="space-y-3">
-                                <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-sky-400 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/40 ring-1 ring-blue-500/40 transition hover:from-blue-500 hover:via-sky-400 hover:to-sky-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900">
+                                <button type="submit" class="btn btn-primary w-full">
                                     <i class="fas fa-arrow-right-to-bracket"></i>
                                     Devam Et
                                 </button>
@@ -183,8 +154,8 @@ $stepTitle = match ($step) {
                             </div>
 
                             <div class="space-y-3">
-                                <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 via-primary-500 to-primary-400 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-500/40 ring-1 ring-primary-500/40 transition hover:from-primary-500 hover:via-primary-400 hover:to-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900">
-                                    <i class="fas fa-arrow-right-to-bracket"></i>
+                                <button type="submit" class="btn btn-primary w-full">
+                                    <i class="fas fa-door-open"></i>
                                     Giriş Yap
                                 </button>
                                 <button type="submit"
@@ -227,6 +198,7 @@ $stepTitle = match ($step) {
                                     pattern="[0-9]*"
                                     maxlength="<?= ResidentOtpService::OTP_LENGTH ?>"
                                     data-otp-input
+                                    data-otp-length="<?= ResidentOtpService::OTP_LENGTH ?>"
                                     data-auto-focus
                                     aria-invalid="<?= $otpError ? 'true' : 'false' ?>"
                                     class="mt-1 block w-full rounded-xl border <?= $otpError ? 'border-red-300 focus:border-red-500 focus:ring-red-500 dark:border-red-600' : 'border-gray-200 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-700' ?> bg-white px-4 py-3 text-center text-xl tracking-widest text-gray-900 placeholder:text-gray-300 shadow-sm transition focus:border-primary-500 focus:ring-primary-500 dark:bg-gray-800 dark:text-gray-100"
@@ -236,7 +208,7 @@ $stepTitle = match ($step) {
                                 </p>
                             </div>
 
-                            <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 via-primary-500 to-primary-400 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-500/40 ring-1 ring-primary-500/40 transition hover:from-primary-500 hover:via-primary-400 hover:to-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900">
+                            <button type="submit" class="btn btn-primary w-full">
                                 <i class="fas fa-circle-check"></i>
                                 Girişi Tamamla
                             </button>
@@ -297,7 +269,7 @@ $stepTitle = match ($step) {
                                     placeholder="Şifrenizi tekrar girin">
                             </div>
 
-                            <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 via-primary-500 to-primary-400 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-500/40 ring-1 ring-primary-500/40 transition hover:from-primary-500 hover:via-primary-400 hover:to-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900">
+                            <button type="submit" class="btn btn-primary w-full">
                                 <i class="fas fa-save"></i>
                                 Şifreyi Kaydet ve Giriş Yap
                             </button>
@@ -337,112 +309,10 @@ $stepTitle = match ($step) {
                 </aside>
             </div>
         </div>
-    </div>
+    </main>
 
-    <script>
-    (function () {
-        const autoFocus = document.querySelector('[data-auto-focus]');
-        if (autoFocus) {
-            try {
-                autoFocus.focus({ preventScroll: true });
-            } catch (err) {
-                autoFocus.focus();
-            }
-        }
-
-        const otpInput = document.querySelector('[data-otp-input]');
-        if (otpInput) {
-            otpInput.addEventListener('input', (event) => {
-                const cleaned = event.target.value.replace(/\D/g, '').slice(0, <?= ResidentOtpService::OTP_LENGTH ?>);
-                event.target.value = cleaned;
-            });
-        }
-
-        const loginForm = document.querySelector('[data-login-form]');
-        if (loginForm) {
-            const phoneInput = loginForm.querySelector('[data-phone-input]');
-            const forgotButton = loginForm.querySelector('[data-forgot-trigger]');
-            const helper = loginForm.querySelector('[data-phone-helper]');
-            const clientError = loginForm.querySelector('[data-phone-client-error]');
-            const defaultAction = loginForm.dataset.defaultAction || loginForm.getAttribute('action');
-            const forgotAction = forgotButton ? forgotButton.dataset.forgotAction : null;
-
-            const clearClientError = () => {
-                if (clientError) {
-                    clientError.textContent = '';
-                    clientError.classList.add('hidden');
-                }
-                if (helper) {
-                    helper.classList.remove('hidden');
-                }
-                if (phoneInput) {
-                    phoneInput.classList.remove('border-red-300', 'focus:border-red-500', 'focus:ring-red-500', 'dark:border-red-600');
-                    phoneInput.classList.add('border-gray-200', 'dark:border-gray-700');
-                    phoneInput.setAttribute('aria-invalid', 'false');
-                }
-            };
-
-            if (phoneInput) {
-                phoneInput.addEventListener('input', () => {
-                    if (phoneInput.value.trim() !== '') {
-                        clearClientError();
-                    }
-                });
-            }
-
-            if (forgotButton && phoneInput && forgotAction) {
-                forgotButton.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    const value = phoneInput.value.trim();
-                    if (value === '') {
-                        if (clientError) {
-                            clientError.textContent = 'Lütfen önce telefon numaranızı girin.';
-                            clientError.classList.remove('hidden');
-                        }
-                        if (helper) {
-                            helper.classList.add('hidden');
-                        }
-                        phoneInput.classList.remove('border-gray-200', 'dark:border-gray-700');
-                        phoneInput.classList.add('border-red-300', 'focus:border-red-500', 'focus:ring-red-500', 'dark:border-red-600');
-                        phoneInput.setAttribute('aria-invalid', 'true');
-                        phoneInput.focus();
-                        return;
-                    }
-
-                    clearClientError();
-                    loginForm.setAttribute('action', forgotAction);
-                    loginForm.submit();
-                    loginForm.setAttribute('action', defaultAction);
-                });
-            }
-        }
-
-        const resendButton = document.querySelector('[data-resend-button]');
-        const countdownSpan = document.querySelector('[data-resend-countdown]');
-        if (resendButton && resendButton.hasAttribute('disabled') && resendButton.dataset.resendAt) {
-            let remaining = Math.max(0, Math.floor((parseInt(resendButton.dataset.resendAt, 10) - Date.now()) / 1000));
-            if (countdownSpan) {
-                countdownSpan.classList.remove('hidden');
-                countdownSpan.textContent = `(${remaining})`;
-            }
-
-            const interval = setInterval(() => {
-                remaining -= 1;
-                if (remaining <= 0) {
-                    clearInterval(interval);
-                    resendButton.disabled = false;
-                    if (countdownSpan) {
-                        countdownSpan.classList.add('hidden');
-                    }
-                    return;
-                }
-                if (countdownSpan) {
-                    countdownSpan.textContent = `(${remaining})`;
-                }
-            }, 1000);
-        }
-    })();
-    </script>
+    <script src="<?= Utils::asset('js/resident-login.js') ?>?v=<?= file_exists(__DIR__ . '/../../../assets/js/resident-login.js') ? filemtime(__DIR__ . '/../../../assets/js/resident-login.js') : time() ?>" defer></script>
+    </main>
 </body>
 </html>
 
